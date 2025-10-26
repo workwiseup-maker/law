@@ -121,7 +121,7 @@
             </div><!-- /.container-fluid -->
         </header><!-- /.main-header -->
         <!-- hero-section-start -->
-        <section class="page-header" id="home" style="min-height: 650px; padding: 150px 0 120px;">
+        <section class="page-header" id="home" style="min-height: clamp(500px, 80vh, 650px); padding: clamp(100px, 15vh, 150px) 0 clamp(80px, 12vh, 120px);">
             <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/slider-1-1.jpg);"></div>
             <div class="page-header__shape"></div>
             <div class="container">
@@ -143,11 +143,11 @@
                                         UK Immigration Experts
                                     </div>
                                 </div>
-                                <h3 class="sec-title__title bw-split-in-up" style="color: #fff; font-size: 65px; line-height: 1.2; margin-bottom: 25px;">
+                                <h3 class="sec-title__title bw-split-in-up" style="color: #fff; font-size: clamp(35px, 6vw, 65px); line-height: 1.2; margin-bottom: 25px;">
                                     Your Path to the UK, <span>Made Simple</span>
                                 </h3>
                             </div>
-                            <p style="color: #ededed; font-size: 18px; line-height: 1.8; margin-bottom: 35px; max-width: 600px;">
+                            <p style="color: #ededed; font-size: clamp(16px, 2.5vw, 18px); line-height: 1.8; margin-bottom: 35px; max-width: 600px;">
                                 Expert UK immigration solicitors providing comprehensive visa solutions with proven success. SRA-regulated legal services you can trust.
                             </p>
                             <div class="d-flex flex-wrap gap-3">
@@ -162,22 +162,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-xl-5">
-                        <div class="wow fadeInRight" data-wow-delay="400ms" style="text-align: center; margin-top: 40px;">
-                            <div style="background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px 30px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="col-lg-4 col-xl-5 mt-4 mt-lg-0">
+                        <div class="wow fadeInRight" data-wow-delay="400ms" style="text-align: center;">
+                            <div style="background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: clamp(25px, 4vw, 40px) clamp(20px, 3vw, 30px); border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2);">
                                 <div style="margin-bottom: 25px;">
-                                    <div style="width: 80px; height: 80px; background-color: var(--bekenbeysolicitors-base); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                                        <i class="icon-calendar" style="font-size: 40px; color: #fff;"></i>
+                                    <div style="width: clamp(60px, 10vw, 80px); height: clamp(60px, 10vw, 80px); background-color: var(--bekenbeysolicitors-base); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                        <i class="icon-calendar" style="font-size: clamp(30px, 5vw, 40px); color: #fff;"></i>
                                     </div>
-                                    <h4 style="color: #fff; font-size: 24px; margin-bottom: 15px;">Quick Response</h4>
-                                    <p style="color: #ededed; font-size: 15px; margin-bottom: 0;">Get expert consultation within 24 hours</p>
+                                    <h4 style="color: #fff; font-size: clamp(20px, 3vw, 24px); margin-bottom: 15px;">Quick Response</h4>
+                                    <p style="color: #ededed; font-size: clamp(14px, 2vw, 15px); margin-bottom: 0;">Get expert consultation within 24 hours</p>
                                 </div>
                                 <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 25px;">
-                                    <div style="width: 80px; height: 80px; background-color: var(--bekenbeysolicitors-base); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                                        <i class="icon-success-1" style="font-size: 40px; color: #fff;"></i>
+                                    <div style="width: clamp(60px, 10vw, 80px); height: clamp(60px, 10vw, 80px); background-color: var(--bekenbeysolicitors-base); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                        <i class="icon-success-1" style="font-size: clamp(30px, 5vw, 40px); color: #fff;"></i>
                                     </div>
-                                    <h4 style="color: #fff; font-size: 24px; margin-bottom: 15px;">SRA Regulated</h4>
-                                    <p style="color: #ededed; font-size: 15px; margin-bottom: 0;">Professional legal service you can trust</p>
+                                    <h4 style="color: #fff; font-size: clamp(20px, 3vw, 24px); margin-bottom: 15px;">SRA Regulated</h4>
+                                    <p style="color: #ededed; font-size: clamp(14px, 2vw, 15px); margin-bottom: 0;">Professional legal service you can trust</p>
                                 </div>
                             </div>
                         </div>
@@ -220,12 +220,12 @@
         </section>-->
         <section class="about-one" id="about">
             <div class="container">
-                <div class="row">
+                <div class="row gutter-y-30">
                     <div class="col-lg-5">
-                        <div class="about-one__image wow fadeInLeft " data-wow-delay="00ms">
-                            <img src="assets/images/resources/ergul-celiksoy-about-us.png" alt="Dr Ergul Celiksoy" style="width: 600px; height: 600px; object-fit: cover; border-radius: 8px;">
+                        <div class="about-one__image wow fadeInLeft " data-wow-delay="00ms" style="text-align: center;">
+                            <img src="assets/images/resources/ergul-celiksoy-about-us.png" alt="Dr Ergul Celiksoy" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 8px; display: inline-block;">
                             <div class="about-one__image__info" style="position: relative; margin-top: 20px; background: transparent; padding: 0; box-shadow: none;">
-                                <p style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0; text-align: center;">
+                                <p style="font-size: clamp(16px, 3vw, 18px); font-weight: 600; color: #1a1a1a; margin: 0; text-align: center;">
                                     Dr Ergul Celiksoy, SRA Regulated Solicitor
                                 </p>
                             </div>

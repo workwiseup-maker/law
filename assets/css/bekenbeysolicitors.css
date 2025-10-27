@@ -16086,8 +16086,27 @@ body.megamenu-popup-active {
     background-size: cover;
     background-image: url(../images/backgrounds/page-header-bg-1-1.jpg);
 }
-
     .page-header__bg::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(274.1deg, rgba(var(--bekenbeysolicitors-primary-rgb, 25, 34, 58), 0.7) 23.26%, rgba(var(--bekenbeysolicitors-base-rgb, 199, 149, 74), 0.7) 99.15%);
+    }
+.page-header__bg2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/backgrounds/page-header-bg-1-1.jpg);
+}
+
+    .page-header__bg2::after {
         content: "";
         position: absolute;
         left: 0;
@@ -16097,7 +16116,7 @@ body.megamenu-popup-active {
         background: rgba(0, 0, 0, 0.7); /* Daha koyu siyah */
         z-index: 1;
     }
-
+   
 
 .page-header__shape {
     position: absolute;

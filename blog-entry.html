@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog Entry || Bekenbey Solicitors || UK Immigration Experts</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Create and manage SEO-optimized blog entries for Bekenbey Solicitors." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Whisper&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/vendors/bekenbeysolicitors-icons/style.css" />
+    <link rel="stylesheet" href="assets/vendors/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/bekenbeysolicitors.css" />
+    
+    <style>
+        /* Additional styles using existing CSS variables */
+        .blog-entry-section {
+            padding: 80px 0;
+            background-color: var(--bekenbeysolicitors-white);
+        }
+        
+        .blog-entry-form {
+            background-color: var(--bekenbeysolicitors-white);
+            padding: 40px;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .blog-entry-section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--bekenbeysolicitors-primary);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--bekenbeysolicitors-base);
+            font-family: var(--bekenbeysolicitors-heading-font);
+        }
+        
+        .blog-entry-section-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--bekenbeysolicitors-primary);
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-family: var(--bekenbeysolicitors-heading-font);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--bekenbeysolicitors-primary);
+            margin-bottom: 8px;
+            font-family: var(--bekenbeysolicitors-font);
+        }
+        
+        .form-label-required::after {
+            content: " *";
+            color: #dc3545;
+        }
+        
+        .form-help-text {
+            display: block;
+            font-size: 13px;
+            color: var(--bekenbeysolicitors-text-gray);
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .form-control,
+        .form-select {
+            width: 100%;
+            height: 52px;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 5px;
+            padding: 0 20px;
+            font-size: 14px;
+            color: var(--bekenbeysolicitors-text-dark);
+            background-color: var(--bekenbeysolicitors-white);
+            transition: all 0.3s ease;
+            font-family: var(--bekenbeysolicitors-font);
+        }
+        
+        .form-control:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--bekenbeysolicitors-base);
+            box-shadow: 0 0 0 3px rgba(var(--bekenbeysolicitors-base-rgb), 0.1);
+        }
+        
+        .form-control-textarea {
+            height: auto;
+            min-height: 120px;
+            padding: 15px 20px;
+            resize: vertical;
+        }
+        
+        .form-control-wysiwyg {
+            min-height: 400px;
+        }
+        
+        .char-counter {
+            font-size: 12px;
+            color: var(--bekenbeysolicitors-text-gray);
+            margin-top: 5px;
+            text-align: right;
+        }
+        
+        .char-counter.warning {
+            color: #ffc107;
+        }
+        
+        .char-counter.error {
+            color: #dc3545;
+        }
+        
+        .tag-input-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 10px;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 5px;
+            min-height: 52px;
+            align-items: center;
+            background-color: var(--bekenbeysolicitors-white);
+        }
+        
+        .tag-input-container:focus-within {
+            border-color: var(--bekenbeysolicitors-base);
+            box-shadow: 0 0 0 3px rgba(var(--bekenbeysolicitors-base-rgb), 0.1);
+        }
+        
+        .tag-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background-color: var(--bekenbeysolicitors-base);
+            color: var(--bekenbeysolicitors-white);
+            padding: 5px 12px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        
+        .tag-remove {
+            cursor: pointer;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: var(--bekenbeysolicitors-white);
+            padding: 0;
+            margin-left: 5px;
+        }
+        
+        .tag-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            min-width: 120px;
+            font-size: 14px;
+            padding: 5px;
+            font-family: var(--bekenbeysolicitors-font);
+        }
+        
+        .file-upload-wrapper {
+            position: relative;
+        }
+        
+        .file-upload-input {
+            display: none;
+        }
+        
+        .file-upload-label {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--bekenbeysolicitors-gray);
+            color: var(--bekenbeysolicitors-primary);
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .file-upload-label:hover {
+            background-color: var(--bekenbeysolicitors-base);
+            color: var(--bekenbeysolicitors-white);
+        }
+        
+        .file-name-display {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--bekenbeysolicitors-text);
+        }
+        
+        .image-preview {
+            margin-top: 15px;
+            max-width: 300px;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .image-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+        
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .checkbox-item,
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .checkbox-item input[type="checkbox"],
+        .radio-item input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .checkbox-item label,
+        .radio-item label {
+            font-size: 14px;
+            color: var(--bekenbeysolicitors-text-dark);
+            cursor: pointer;
+            margin: 0;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid var(--bekenbeysolicitors-gray2);
+        }
+        
+        .btn-draft,
+        .btn-publish {
+            padding: 15px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--bekenbeysolicitors-font);
+        }
+        
+        .btn-draft {
+            background-color: var(--bekenbeysolicitors-gray2);
+            color: var(--bekenbeysolicitors-primary);
+        }
+        
+        .btn-draft:hover {
+            background-color: var(--bekenbeysolicitors-border-color);
+        }
+        
+        .btn-publish {
+            background-color: var(--bekenbeysolicitors-base);
+            color: var(--bekenbeysolicitors-white);
+        }
+        
+        .btn-publish:hover {
+            background-color: var(--bekenbeysolicitors-primary);
+        }
+        
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 9998;
+        }
+        
+        .modal-backdrop.active {
+            display: block;
+        }
+        
+        .confirmation-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--bekenbeysolicitors-white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .confirmation-modal.active {
+            display: block;
+        }
+        
+        .modal-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--bekenbeysolicitors-primary);
+            margin-bottom: 15px;
+            font-family: var(--bekenbeysolicitors-heading-font);
+        }
+        
+        .modal-message {
+            font-size: 15px;
+            color: var(--bekenbeysolicitors-text);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+        
+        .btn-modal-cancel,
+        .btn-modal-confirm {
+            padding: 12px 30px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-modal-cancel {
+            background-color: var(--bekenbeysolicitors-gray2);
+            color: var(--bekenbeysolicitors-primary);
+        }
+        
+        .btn-modal-cancel:hover {
+            background-color: var(--bekenbeysolicitors-border-color);
+        }
+        
+        .btn-modal-confirm {
+            background-color: var(--bekenbeysolicitors-base);
+            color: var(--bekenbeysolicitors-white);
+        }
+        
+        .btn-modal-confirm:hover {
+            background-color: var(--bekenbeysolicitors-primary);
+        }
+        
+        .subheading-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .subheading-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: var(--bekenbeysolicitors-gray);
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .subheading-item input {
+            flex: 1;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 3px;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+        
+        .subheading-item select {
+            width: 80px;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 3px;
+            padding: 8px;
+            font-size: 14px;
+        }
+        
+        .btn-remove-subheading {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .btn-add-subheading {
+            background-color: var(--bekenbeysolicitors-base);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .btn-add-subheading:hover {
+            background-color: var(--bekenbeysolicitors-primary);
+        }
+        
+        .auto-generated-badge {
+            display: inline-block;
+            font-size: 11px;
+            padding: 3px 8px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-entry-form {
+                padding: 25px;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .btn-draft,
+            .btn-publish {
+                width: 100%;
+            }
+            
+            .confirmation-modal {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+    </div>
+    <!-- /.preloader -->
+    
+    <div class="page-wrapper">
+        <header class="main-header main-header--two sticky-header sticky-header--normal">
+            <div class="main-header__inner">
+                <div class="main-header__logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo-dark.png" alt="Bekenbey Solicitors" width="160">
+                    </a>
+                </div><!-- /.main-header__logo -->
+                <div class="main-header__center">
+                    <div class="topbar-one">
+                        <div class="topbar-one__inner">
+                            <ul class="list-unstyled topbar-one__info">
+                                <li class="topbar-one__info__item">
+                                    <i class="fas fa-map-marker-alt topbar-one__info__icon"></i>
+                                    150 Minories, London, England, EC3N 1LS
+                                </li>
+                                <li class="topbar-one__info__item">
+                                    <i class="fas fa-envelope topbar-one__info__icon"></i>
+                                    <a href="mailto:info@bekenbeysolicitors.co.uk">info@bekenbeysolicitors.co.uk</a>
+                                </li>
+                            </ul><!-- /.list-unstyled topbar-one__info -->
+                            <div class="topbar-one__right">
+                                <p class="topbar-one__text"><i class="icon-clock topbar-one__info__icon"></i>Open:
+                                    Mon-Fri: 09:00 - 18:00</p><!-- /.topbar-one__text -->
+                            </div><!-- /.topbar-one__right -->
+                        </div><!-- /.topbar-one__inner -->
+                    </div><!-- /.topbar-one -->
+                    <div class="main-header__center__bottom">
+                        <nav class="main-header__nav main-menu">
+                            <ul class="main-menu__list">
+                                <li class="dropdown megamenu">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Immigration (Our Services)</a>
+                                    <ul>
+                                        <li><a href="global-talent-visa.html">Global Talent Visa</a></li>
+                                        <li><a href="innovator-founder-visa.html">Innovator Founder Visa</a></li>
+                                        <li><a href="high-potential-individual-visa.html">High Potential Individual Visa</a></li>
+                                        <li><a href="graduate-visa.html">Graduate Visa</a></li>
+                                        <li><a href="student-visa.html">Student Visa</a></li>
+                                        <li><a href="family-visa.html">Family Visa</a></li>
+                                        <li><a href="health-care-worker-visa.html">Health &amp; Care Worker Visa</a></li>
+                                        <li><a href="skilled-worker-visa.html">Skilled Worker Visa</a></li>
+                                        <li><a href="self-sponsorship-visa.html">Self Sponsorship Visa</a></li>
+                                        <li><a href="sponsor-licence-applications.html">Sponsor Licence Applications</a></li>
+                                        <li><a href="scale-up-visa.html">Scale Up Visa</a></li>
+                                        <li><a href="global-business-mobility-visa.html">Global Business Mobility (GBM) Visa</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="blog-grid-right.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </nav><!-- /.main-header__nav -->
+                        <div class="main-header__center__right">
+                            <div class="mobile-nav__btn mobile-nav__toggler">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div><!-- /.mobile-nav__toggler -->
+                            <div class="main-header__btn">
+                                <a href="#" class="search-toggler main-header__search">
+                                    <i class="icon-search" aria-hidden="true"></i>
+                                    <span class="sr-only">Search</span>
+                                </a><!-- /.search-toggler -->
+                                <a href="login.html" class="main-header__user">
+                                </a>
+                                <div class="main-header__btn__border"></div>
+                                <a href="contact.html" class="bekenbeysolicitors-btn">
+                                    <i>Book Consultation Now</i><span>Book Consultation Now</span>
+                                </a><!-- /.thm-btn main-header__btn -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header__right">
+                    <div class="main-header__info">
+                        <div class="main-header__info__icon">
+                            <i class="icon-phone-1"></i>
+                            <span class="main-header__info__icon__zoom">
+                                <i class="icon-phone-1"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <span class="main-header__info__text">Call anytime</span>
+                            <a href="tel:+447784720070">+44 7784 720070</a>
+                        </div>
+                    </div>
+                </div><!-- /.main-header__right -->
+            </div><!-- /.main-header__inner -->
+        </header><!-- /.main-header -->
+
+        <section class="page-header">
+            <div class="page-header__bg"></div>
+            <div class="container">
+                <h2 class="page-header__title bw-split-in-right">Create Blog Entry</h2>
+                <ul class="bekenbeysolicitors-breadcrumb list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog-grid-right.html">Blog</a></li>
+                    <li><span>Create Entry</span></li>
+                </ul><!-- /.thm-breadcrumb list-unstyled -->
+            </div><!-- /.container -->
+        </section><!-- /.page-header -->
+
+        <section class="blog-entry-section">
+            <div class="container">
+                <form id="blogEntryForm" novalidate>
+                    
+                    <!-- MAIN CONTENT FIELDS -->
+                    <div class="blog-entry-form">
+                        <h3 class="blog-entry-section-title">
+                            <i class="fas fa-file-alt" style="margin-right: 10px;"></i>
+                            Main Content Fields
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="blogTitle">Blog Title (H1)</label>
+                            <span class="form-help-text">Character Limit: 50–60 characters. Include your target keyword.</span>
+                            <input 
+                                type="text" 
+                                id="blogTitle" 
+                                name="blogTitle" 
+                                class="form-control" 
+                                placeholder="Example: UK Visa Application Process: Step-by-Step Guide"
+                                maxlength="60"
+                                required
+                                data-counter="titleCounter"
+                            />
+                            <div id="titleCounter" class="char-counter">0 / 60 characters</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="permalink">Permalink / URL Slug</label>
+                            <span class="form-help-text">SEO-friendly URL (auto-generated from title, editable). No special characters or Turkish characters.</span>
+                            <input 
+                                type="text" 
+                                id="permalink" 
+                                name="permalink" 
+                                class="form-control" 
+                                placeholder="uk-visa-application-process"
+                                required
+                                pattern="[a-z0-9-]+"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="metaDescription">Meta Description</label>
+                            <span class="form-help-text">Character Limit: 150–160 characters. Shown in Google search results.</span>
+                            <textarea 
+                                id="metaDescription" 
+                                name="metaDescription" 
+                                class="form-control form-control-textarea" 
+                                placeholder="A complete guide to the UK visa application process and key requirements for 2025."
+                                maxlength="160"
+                                required
+                                data-counter="metaCounter"
+                            ></textarea>
+                            <div id="metaCounter" class="char-counter">0 / 160 characters</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="blogContent">Main Blog Content</label>
+                            <span class="form-help-text">Use H2 and H3 headings for better structure and SEO. Include bold, italic, links, lists, and images as needed.</span>
+                            <textarea 
+                                id="blogContent" 
+                                name="blogContent" 
+                                class="form-control form-control-textarea form-control-wysiwyg" 
+                                placeholder="Write your blog content here. Use H2 and H3 headings to organize your content..."
+                                required
+                            ></textarea>
+                            <small class="form-help-text">Tip: Include relevant keywords naturally throughout the content. Add internal links to other pages on your site.</small>
+                        </div>
+                    </div>
+
+                    <!-- SEO FIELDS -->
+                    <div class="blog-entry-form">
+                        <h3 class="blog-entry-section-title">
+                            <i class="fas fa-search" style="margin-right: 10px;"></i>
+                            SEO Fields
+                        </h3>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="focusKeyword">Focus Keyword</label>
+                            <span class="form-help-text">The main keyword to target for this blog post.</span>
+                            <input 
+                                type="text" 
+                                id="focusKeyword" 
+                                name="focusKeyword" 
+                                class="form-control" 
+                                placeholder="UK immigration lawyers"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="additionalKeywords">Additional Keywords</label>
+                            <span class="form-help-text">Secondary keywords for better SEO reach. Press Enter or comma to add.</span>
+                            <div class="tag-input-container" id="keywordsContainer">
+                                <input 
+                                    type="text" 
+                                    id="additionalKeywords" 
+                                    class="tag-input" 
+                                    placeholder="Type keyword and press Enter"
+                                />
+                            </div>
+                            <input type="hidden" id="keywordsHidden" name="additionalKeywords" />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="subheadings">Subheadings (H2-H3 Outline)</label>
+                            <span class="form-help-text">
+                                Organize your content structure. These will be auto-extracted from your content. 
+                                <span class="auto-generated-badge">AUTO-GENERATED</span>
+                            </span>
+                            <ul class="subheading-list" id="subheadingsList">
+                                <li class="subheading-item">
+                                    <select class="subheading-level">
+                                        <option value="H2">H2</option>
+                                        <option value="H3">H3</option>
+                                    </select>
+                                    <input type="text" class="subheading-text" placeholder="Enter subheading text" />
+                                    <button type="button" class="btn-remove-subheading" onclick="removeSubheading(this)">Remove</button>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn-add-subheading" onclick="addSubheading()">
+                                <i class="fas fa-plus"></i> Add Subheading
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- MEDIA FIELDS -->
+                    <div class="blog-entry-form">
+                        <h3 class="blog-entry-section-title">
+                            <i class="fas fa-image" style="margin-right: 10px;"></i>
+                            Media Fields
+                        </h3>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="featuredImage">Featured Image</label>
+                            <span class="form-help-text">Recommended Size: 1200×630px. Main image shown in listings and social media.</span>
+                            <div class="file-upload-wrapper">
+                                <input 
+                                    type="file" 
+                                    id="featuredImage" 
+                                    name="featuredImage" 
+                                    class="file-upload-input"
+                                    accept="image/*"
+                                    onchange="handleFileUpload(this, 'featuredImagePreview', 'featuredImageName')"
+                                />
+                                <label for="featuredImage" class="file-upload-label">
+                                    <i class="fas fa-upload"></i> Choose File
+                                </label>
+                                <div id="featuredImageName" class="file-name-display"></div>
+                                <div id="featuredImagePreview" class="image-preview"></div>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <label class="form-label" for="featuredImageUrl">Or Enter Image URL:</label>
+                                <input 
+                                    type="url" 
+                                    id="featuredImageUrl" 
+                                    name="featuredImageUrl" 
+                                    class="form-control" 
+                                    placeholder="https://example.com/image.jpg"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="imageAltText">Image Alt Text</label>
+                            <span class="form-help-text">SEO-friendly description of the image for accessibility and search engines.</span>
+                            <input 
+                                type="text" 
+                                id="imageAltText" 
+                                name="imageAltText" 
+                                class="form-control" 
+                                placeholder="UK visa application form being completed"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="ogImage">OG Image (Optional)</label>
+                            <span class="form-help-text">Custom image for social media previews (Facebook, LinkedIn). If empty, featured image will be used.</span>
+                            <div class="file-upload-wrapper">
+                                <input 
+                                    type="file" 
+                                    id="ogImage" 
+                                    name="ogImage" 
+                                    class="file-upload-input"
+                                    accept="image/*"
+                                    onchange="handleFileUpload(this, 'ogImagePreview', 'ogImageName')"
+                                />
+                                <label for="ogImage" class="file-upload-label">
+                                    <i class="fas fa-upload"></i> Choose File
+                                </label>
+                                <div id="ogImageName" class="file-name-display"></div>
+                                <div id="ogImagePreview" class="image-preview"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORY & TAGS -->
+                    <div class="blog-entry-form">
+                        <h3 class="blog-entry-section-title">
+                            <i class="fas fa-folder-open" style="margin-right: 10px;"></i>
+                            Category & Tags
+                        </h3>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="category">Category</label>
+                            <span class="form-help-text">Select the primary category for this blog post.</span>
+                            <select id="category" name="category" class="form-select" required>
+                                <option value="">Select a category</option>
+                                <option value="immigration-law">Immigration Law</option>
+                                <option value="family-law">Family Law</option>
+                                <option value="business-law">Business Law</option>
+                                <option value="legal-news">Legal News</option>
+                                <option value="visa-guides">Visa Guides</option>
+                                <option value="case-studies">Case Studies</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="tags">Tags</label>
+                            <span class="form-help-text">Add relevant tags to help readers find related content. Press Enter or comma to add.</span>
+                            <div class="tag-input-container" id="tagsContainer">
+                                <input 
+                                    type="text" 
+                                    id="tags" 
+                                    class="tag-input" 
+                                    placeholder="Type tag and press Enter"
+                                />
+                            </div>
+                            <input type="hidden" id="tagsHidden" name="tags" />
+                            <small class="form-help-text">Example tags: Visa, Sponsorship, Work Permit, Legal Advice</small>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL MEDIA META TAGS -->
+                    <div class="blog-entry-form">
+                        <h3 class="blog-entry-section-title">
+                            <i class="fas fa-share-alt" style="margin-right: 10px;"></i>
+                            Social Media Meta Tags
+                        </h3>
+
+                        <h4 class="blog-entry-section-subtitle">Open Graph (Facebook & LinkedIn)</h4>
+
+                        <div class="form-group">
+                            <label class="form-label" for="ogTitle">OG Title</label>
+                            <span class="form-help-text">Title for Facebook & LinkedIn shares. If empty, blog title will be used.</span>
+                            <input 
+                                type="text" 
+                                id="ogTitle" 
+                                name="ogTitle" 
+                                class="form-control" 
+                                placeholder="Leave empty to use blog title"
+                                maxlength="60"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="ogDescription">OG Description</label>
+                            <span class="form-help-text">Character Limit: 200. Description for social media shares.</span>
+                            <textarea 
+                                id="ogDescription" 
+                                name="ogDescription" 
+                                class="form-control form-control-textarea" 
+                                placeholder="Learn how our UK immigration lawyers help you achieve successful visa outcomes."
+                                maxlength="200"
+                                data-counter="ogDescCounter"
+                            ></textarea>
+                            <div id="ogDescCounter" class="char-counter">0 / 200 characters</div>
+                        </div>
+
+                        <h4 class="blog-entry-section-subtitle">Twitter Card (Optional)</h4>
+
+                        <div class="form-group">
+                            <label class="form-label" for="twitterTitle">Twitter Title</label>
+                            <span class="form-help-text">Custom title for Twitter. If empty, OG title will be used.</span>
+                            <input 
+                                type="text" 
+                                id="twitterTitle" 
+                                name="twitterTitle" 
+                                class="form-control" 
+                                placeholder="Leave empty to use OG title"
+                                maxlength="60"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="twitterDescription">Twitter Description</label>
+                            <span class="form-help-text">Custom description for Twitter shares.</span>
+                            <textarea 
+                                id="twitterDescription" 
+                                name="twitterDescription" 
+                                class="form-control form-control-textarea" 
+                                placeholder="Leave empty to use OG description"
+                                maxlength="200"
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <!-- ADVANCED SEO SETTINGS -->
+                    <div class="blog-entry-form">
+                        <h3 class="blog-entry-section-title">
+                            <i class="fas fa-cog" style="margin-right: 10px;"></i>
+                            Advanced SEO Settings
+                        </h3>
+
+                        <div class="form-group">
+                            <label class="form-label" for="canonicalUrl">Canonical URL</label>
+                            <span class="form-help-text">Specify the original URL if this content exists elsewhere. Leave empty for new content.</span>
+                            <input 
+                                type="url" 
+                                id="canonicalUrl" 
+                                name="canonicalUrl" 
+                                class="form-control" 
+                                placeholder="https://example.com/original-article"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Robots Meta Tag</label>
+                            <span class="form-help-text">Control how search engines index this page.</span>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="radio" id="robotsIndex" name="robotsIndex" value="index" checked />
+                                    <label for="robotsIndex">Index</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="radio" id="robotsNoindex" name="robotsIndex" value="noindex" />
+                                    <label for="robotsNoindex">Noindex</label>
+                                </div>
+                            </div>
+                            <div class="checkbox-group" style="margin-top: 10px;">
+                                <div class="checkbox-item">
+                                    <input type="radio" id="robotsFollow" name="robotsFollow" value="follow" checked />
+                                    <label for="robotsFollow">Follow</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="radio" id="robotsNofollow" name="robotsFollow" value="nofollow" />
+                                    <label for="robotsNofollow">Nofollow</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="schemaType">Schema Markup Type</label>
+                            <span class="form-help-text">Select the appropriate schema type for structured data and rich results.</span>
+                            <select id="schemaType" name="schemaType" class="form-select">
+                                <option value="BlogPosting" selected>BlogPosting</option>
+                                <option value="Article">Article</option>
+                                <option value="NewsArticle">NewsArticle</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- CONTENT MANAGEMENT -->
+                    <div class="blog-entry-form">
+                        <h3 class="blog-entry-section-title">
+                            <i class="fas fa-user-edit" style="margin-right: 10px;"></i>
+                            Content Management
+                        </h3>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="author">Author</label>
+                            <span class="form-help-text">Blog author name for SEO schema and display.</span>
+                            <input 
+                                type="text" 
+                                id="author" 
+                                name="author" 
+                                class="form-control" 
+                                placeholder="John Smith"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label form-label-required" for="publishStatus">Publish Status</label>
+                            <span class="form-help-text">Choose whether to save as draft or publish immediately.</span>
+                            <select id="publishStatus" name="publishStatus" class="form-select" required>
+                                <option value="draft" selected>Draft</option>
+                                <option value="published">Published</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Last Updated</label>
+                            <span class="form-help-text">Auto-updates for schema and structured data.</span>
+                            <input 
+                                type="text" 
+                                id="lastUpdated" 
+                                name="lastUpdated" 
+                                class="form-control" 
+                                readonly
+                                value=""
+                            />
+                        </div>
+                    </div>
+
+                    <!-- FORM ACTIONS -->
+                    <div class="form-actions">
+                        <button type="button" class="btn-draft" onclick="saveDraft()">
+                            <i class="fas fa-save"></i> Save as Draft
+                        </button>
+                        <button type="button" class="btn-publish" onclick="publishBlog()">
+                            <i class="fas fa-check-circle"></i> Publish
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+            <div class="main-footer__top">
+                <div class="container">
+                    <div class="main-footer__top__inner">
+                        <div class="row gutter-y-30">
+                            <div class="col-lg-8">
+                                <div class="main-footer__info">
+                                    <ul class="list-unstyled main-footer__info__list">
+                                        <li class="main-footer__info__item">
+                                            <div class="main-footer__info__icon">
+                                                <i class="icon-location"></i>
+                                            </div>
+                                            <div class="main-footer__info__content">
+                                                <p class="main-footer__info__text">
+                                                    150 Minories, London, England, EC3N 1LS
+                                                </p><!-- /.contact-one__info__text -->
+                                            </div>
+                                        </li>
+                                        <li class="main-footer__info__item">
+                                            <div class="main-footer__info__icon">
+                                                <i class="icon-phone-1"></i>
+                                            </div>
+                                            <div class="main-footer__info__content">
+                                                <p class="main-footer__info__text">
+                                                    <a href="tel:+447784720070">+44 7784 720070</a>
+                                                </p><!-- /.contact-one__info__text -->
+                                            </div>
+                                        </li>
+                                        <li class="main-footer__info__item">
+                                            <div class="main-footer__info__icon">
+                                                <i class="icon-mail"></i>
+                                            </div>
+                                            <div class="main-footer__info__content">
+                                                <p class="main-footer__info__text">
+                                                    <a href="mailto:info@bekenbeysolicitors.co.uk">info@bekenbeysolicitors.co.uk</a>
+                                                </p><!-- /.contact-one__info__text -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="main-footer__info__social">
+                                    <a href="https://facebook.com">
+                                        <i class="icon-facebook"></i>
+                                        <span class="sr-only">Facebook</span>
+                                    </a>
+                                    <a href="https://pinterest.com">
+                                        <i class="icon-pinterest"></i>
+                                        <span class="sr-only">Pinterest</span>
+                                    </a>
+                                    <a href="https://twitter.com">
+                                        <i class="icon-twitter"></i>
+                                        <span class="sr-only">Twitter</span>
+                                    </a>
+                                    <a href="https://youtube.com">
+                                        <i class="icon-youtube"></i>
+                                        <span class="sr-only">Youtube</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.container -->
+            </div><!-- /.main-footer__top -->
+            <div class="main-footer__bottom  wow fadeInUp" data-wow-delay="00ms">
+                <div class="container">
+                    <div class="main-footer__bottom__inner">
+                        <p class="main-footer__copyright">
+                            &copy; Copyright <span class="dynamic-year"></span> by Bekenbey Solicitors. All Rights Reserved.
+                        </p>
+                    </div><!-- /.main-footer__inner -->
+                </div><!-- /.container -->
+            </div><!-- /.main-footer__bottom -->
+        </footer><!-- /.main-footer -->
+
+    </div><!-- /.page-wrapper -->
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" width="155" alt="" /></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@bekenbeysolicitors.co.uk">info@bekenbeysolicitors.co.uk</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+447784720070">+44 7784 720070</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="https://facebook.com">
+                    <i class="icon-facebook"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                <a href="https://pinterest.com">
+                    <i class="icon-pinterest"></i>
+                    <span class="sr-only">Pinterest</span>
+                </a>
+                <a href="https://twitter.com">
+                    <i class="icon-twitter"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a href="https://youtube.com">
+                    <i class="icon-youtube"></i>
+                    <span class="sr-only">Youtube</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="bekenbeysolicitors-btn">
+                    <i><i class="icon-search"></i></i><span><i class="icon-search"></i></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="confirmation-modal" id="confirmationModal">
+        <h3 class="modal-title" id="modalTitle">Confirm Action</h3>
+        <p class="modal-message" id="modalMessage">Are you sure you want to proceed?</p>
+        <div class="modal-actions">
+            <button type="button" class="btn-modal-cancel" onclick="closeModal()">Cancel</button>
+            <button type="button" class="btn-modal-confirm" id="modalConfirmBtn">Confirm</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui-min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
+    <script src="assets/vendors/tilt/tilt.jquery.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+    <script src="assets/vendors/gsap/gsap.js"></script>
+    <script src="assets/vendors/gsap/scrolltrigger.min.js"></script>
+    <script src="assets/vendors/gsap/splittext.min.js"></script>
+    <script src="assets/vendors/gsap/bekenbeysolicitors-split.js"></script>
+    <script src="assets/js/bekenbeysolicitors-min.js"></script>
+
+    <!-- Custom Blog Entry Scripts -->
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLastUpdated();
+            initializeCharCounters();
+            initializeTagInputs();
+            setupPermalinkGeneration();
+        });
+
+        // Character Counter
+        function initializeCharCounters() {
+            const fields = document.querySelectorAll('[data-counter]');
+            fields.forEach(field => {
+                const counterId = field.getAttribute('data-counter');
+                const counter = document.getElementById(counterId);
+                const maxLength = field.getAttribute('maxlength');
+                
+                field.addEventListener('input', function() {
+                    const length = this.value.length;
+                    counter.textContent = `${length} / ${maxLength} characters`;
+                    
+                    if (length > maxLength * 0.9) {
+                        counter.classList.add('warning');
+                    } else {
+                        counter.classList.remove('warning');
+                    }
+                    
+                    if (length >= maxLength) {
+                        counter.classList.add('error');
+                    } else {
+                        counter.classList.remove('error');
+                    }
+                });
+            });
+        }
+
+        // Auto-generate permalink from title
+        function setupPermalinkGeneration() {
+            const titleField = document.getElementById('blogTitle');
+            const permalinkField = document.getElementById('permalink');
+            
+            titleField.addEventListener('input', function() {
+                if (!permalinkField.hasAttribute('data-manual')) {
+                    const slug = generateSlug(this.value);
+                    permalinkField.value = slug;
+                }
+            });
+            
+            permalinkField.addEventListener('input', function() {
+                this.setAttribute('data-manual', 'true');
+            });
+        }
+
+        function generateSlug(text) {
+            return text
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/--+/g, '-')
+                .replace(/^-+|-+$/g, '')
+                .substring(0, 60);
+        }
+
+        // Tag Input System
+        function initializeTagInputs() {
+            setupTagInput('additionalKeywords', 'keywordsContainer', 'keywordsHidden');
+            setupTagInput('tags', 'tagsContainer', 'tagsHidden');
+        }
+
+        function setupTagInput(inputId, containerId, hiddenId) {
+            const input = document.getElementById(inputId);
+            const container = document.getElementById(containerId);
+            const hidden = document.getElementById(hiddenId);
+            const tags = [];
+            
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ',') {
+                    e.preventDefault();
+                    const value = this.value.trim();
+                    if (value && !tags.includes(value)) {
+                        tags.push(value);
+                        addTagElement(value, container, input, tags, hidden);
+                        this.value = '';
+                        updateHiddenInput(tags, hidden);
+                    }
+                }
+            });
+        }
+
+        function addTagElement(value, container, input, tags, hidden) {
+            const tagEl = document.createElement('div');
+            tagEl.className = 'tag-item';
+            tagEl.innerHTML = `
+                ${value}
+                <button type="button" class="tag-remove" onclick="removeTag(this, '${hidden.id}')">&times;</button>
+            `;
+            container.insertBefore(tagEl, input);
+        }
+
+        function removeTag(button, hiddenId) {
+            const tagEl = button.parentElement;
+            const value = tagEl.textContent.trim().replace('×', '');
+            tagEl.remove();
+            
+            const hidden = document.getElementById(hiddenId);
+            const tags = hidden.value ? hidden.value.split(',') : [];
+            const index = tags.indexOf(value);
+            if (index > -1) {
+                tags.splice(index, 1);
+                hidden.value = tags.join(',');
+            }
+        }
+
+        function updateHiddenInput(tags, hidden) {
+            hidden.value = tags.join(',');
+        }
+
+        // Subheading Management
+        function addSubheading() {
+            const list = document.getElementById('subheadingsList');
+            const item = document.createElement('li');
+            item.className = 'subheading-item';
+            item.innerHTML = `
+                <select class="subheading-level">
+                    <option value="H2">H2</option>
+                    <option value="H3">H3</option>
+                </select>
+                <input type="text" class="subheading-text" placeholder="Enter subheading text" />
+                <button type="button" class="btn-remove-subheading" onclick="removeSubheading(this)">Remove</button>
+            `;
+            list.appendChild(item);
+        }
+
+        function removeSubheading(button) {
+            button.parentElement.remove();
+        }
+
+        // File Upload Handler
+        function handleFileUpload(input, previewId, nameId) {
+            const file = input.files[0];
+            if (file) {
+                document.getElementById(nameId).textContent = `Selected: ${file.name}`;
+                
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const preview = document.getElementById(previewId);
+                        preview.innerHTML = `<img src="${e.target.result}" alt="Preview" />`;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        }
+
+        // Update Last Updated Timestamp
+        function updateLastUpdated() {
+            const now = new Date();
+            const formatted = now.toISOString();
+            document.getElementById('lastUpdated').value = formatted;
+        }
+
+        // Form Validation
+        function validateForm() {
+            const form = document.getElementById('blogEntryForm');
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            let firstInvalidField = null;
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#dc3545';
+                    if (!firstInvalidField) {
+                        firstInvalidField = field;
+                    }
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            if (!isValid && firstInvalidField) {
+                firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                firstInvalidField.focus();
+                showNotification('Please fill in all required fields.', 'error');
+            }
+
+            return isValid;
+        }
+
+        // Save as Draft
+        function saveDraft() {
+            updateLastUpdated();
+            showConfirmationModal(
+                'Save as Draft',
+                'Are you sure you want to save this blog post as a draft? You can publish it later.',
+                function() {
+                    const formData = getFormData();
+                    formData.status = 'draft';
+                    console.log('Saving draft:', formData);
+                    showNotification('Draft saved successfully!', 'success');
+                    closeModal();
+                }
+            );
+        }
+
+        // Publish Blog
+        function publishBlog() {
+            if (!validateForm()) {
+                return;
+            }
+            
+            updateLastUpdated();
+            showConfirmationModal(
+                'Publish Blog Post',
+                'Are you sure you want to publish this blog post? It will be visible to the public.',
+                function() {
+                    const formData = getFormData();
+                    formData.status = 'published';
+                    console.log('Publishing blog:', formData);
+                    showNotification('Blog post published successfully!', 'success');
+                    closeModal();
+                    // Here you would typically submit to a backend API
+                    // window.location.href = 'blog-grid-right.html';
+                }
+            );
+        }
+
+        // Get Form Data
+        function getFormData() {
+            const form = document.getElementById('blogEntryForm');
+            const formData = new FormData(form);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Add subheadings
+            const subheadings = [];
+            document.querySelectorAll('.subheading-item').forEach(item => {
+                const level = item.querySelector('.subheading-level').value;
+                const text = item.querySelector('.subheading-text').value;
+                if (text) {
+                    subheadings.push({ level, text });
+                }
+            });
+            data.subheadings = subheadings;
+            
+            return data;
+        }
+
+        // Modal Functions
+        function showConfirmationModal(title, message, onConfirm) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalMessage').textContent = message;
+            document.getElementById('modalBackdrop').classList.add('active');
+            document.getElementById('confirmationModal').classList.add('active');
+            
+            const confirmBtn = document.getElementById('modalConfirmBtn');
+            confirmBtn.onclick = onConfirm;
+        }
+
+        function closeModal() {
+            document.getElementById('modalBackdrop').classList.remove('active');
+            document.getElementById('confirmationModal').classList.remove('active');
+        }
+
+        // Notification System
+        function showNotification(message, type) {
+            // Simple alert for now - you can enhance this with a toast notification
+            alert(message);
+        }
+
+        // Auto-save draft every 2 minutes
+        setInterval(function() {
+            const form = document.getElementById('blogEntryForm');
+            if (form.querySelector('input, textarea').value) {
+                console.log('Auto-saving draft...');
+                // Implement auto-save logic here
+            }
+        }, 120000);
+    </script>
+</body>
+
+</html>
+

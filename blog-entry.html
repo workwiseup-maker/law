@@ -165,51 +165,61 @@
         </section><!-- /.page-header -->
 
         <!-- Blog Entry Start -->
-        <section class="contact-one" style="padding: 100px 0;">
+        <section class="contact-one pt-120 pb-120">
+            <div class="contact-one__bg"></div>
+            <div class="contact-one__overlay"></div>
             <div class="container">
-                <div class="contact-one__wrapper">
-                    
-                    <!-- Success Message (Hidden by default) -->
-                    <div id="successMessage" class="alert alert-success" style="display: none; margin-bottom: 30px;">
-                        <strong>Success!</strong> Blog successfully created.
-                    </div>
-
-                    <form id="blogEntryForm" class="contact-one__form contact-form-validated form-one">
+                <div class="row gutter-y-60">
+                    <div class="col-lg-12">
                         
-                        <!-- 📝 Content Section -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="sec-title text-left" style="margin-bottom: 40px;">
-                                    <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
-                                        <div>
-                                            <i class="fas fa-edit" style="font-size: 20px;"></i>
-                                        </div>
-                                        Content Section
-                                    </div>
-                                    <h3 class="sec-title__title bw-split-in-up">Blog <span>Content Details</span></h3>
-                                </div>
-                            </div>
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="successMessage" class="alert alert-success wow fadeInDown" style="display: none;">
+                            <strong>Success!</strong> Blog successfully created.
                         </div>
 
-                        <div class="form-one__group">
+                        <form id="blogEntryForm" class="contact-one__form contact-form-validated form-one wow fadeInUp" data-wow-delay="100ms">
+                            <div class="contact-one__form__bg-two"></div>
+                            <div class="contact-one__form__bg-one"></div>
+                            
+                            <!-- 📝 Content Section -->
+                            <div class="row mb-40">
+                                <div class="col-12">
+                                    <div class="sec-title text-left">
+                                        <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
+                                            <div>
+                                                <i class="fas fa-edit"></i>
+                                            </div>
+                                            Content Section
+                                        </div>
+                                        <h3 class="sec-title__title bw-split-in-up">Blog <span>Content Details</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-one__group mb-60">
                             <div class="form-one__control form-one__control--full">
-                                <label for="blogTitle" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Blog Title <span style="color: red;">*</span></label>
+                                <label for="blogTitle">Blog Title <span style="color: var(--bekenbeysolicitors-base, #c7954a);">*</span></label>
                                 <input id="blogTitle" type="text" name="blogTitle" placeholder="Enter blog title" required>
                             </div>
 
-                            <div class="form-one__control form-one__control--full">
-                                <label for="blogSlug" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Slug / URL</label>
-                                <input id="blogSlug" type="text" name="blogSlug" placeholder="Auto-generated from title (editable)">
-                                <small style="display: block; margin-top: 5px; color: #666;">This will be auto-filled based on your title</small>
+                            <div class="form-one__control">
+                                <label for="blogSlug">Slug / URL</label>
+                                <input id="blogSlug" type="text" name="blogSlug" placeholder="auto-generated-from-title">
+                                <small class="bekenbeysolicitors-text-dark">Auto-filled from title</small>
+                            </div>
+
+                            <div class="form-one__control">
+                                <label for="authorName">Author Name</label>
+                                <input id="authorName" type="text" name="authorName" placeholder="Enter author name">
                             </div>
 
                             <div class="form-one__control form-one__control--full">
-                                <label for="blogContent" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Main Content <span style="color: red;">*</span></label>
-                                <textarea id="blogContent" name="blogContent" placeholder="Enter your blog content here (HTML supported)" rows="10" required></textarea>
+                                <label for="blogContent">Main Content <span style="color: var(--bekenbeysolicitors-base, #c7954a);">*</span></label>
+                                <textarea id="blogContent" name="blogContent" placeholder="Enter your blog content here (HTML supported)" rows="8" required></textarea>
                             </div>
 
-                            <div class="form-one__control form-one__control--full">
-                                <label for="blogCategory" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Category</label>
+                            <div class="form-one__control">
+                                <label for="blogCategory">Category</label>
                                 <select id="blogCategory" name="blogCategory" class="selectpicker">
                                     <option value="">Select Category</option>
                                     <option value="UK Immigration">UK Immigration</option>
@@ -225,25 +235,20 @@
                                 </select>
                             </div>
 
-                            <div class="form-one__control form-one__control--full">
-                                <label for="blogTags" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Tags</label>
-                                <input id="blogTags" type="text" name="blogTags" placeholder="immigration, visa, uk-law, legal-advice (comma-separated, max 5 tags)">
-                                <small style="display: block; margin-top: 5px; color: #666;">Enter up to 5 tags separated by commas</small>
-                            </div>
-
-                            <div class="form-one__control form-one__control--full">
-                                <label for="authorName" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Author Name</label>
-                                <input id="authorName" type="text" name="authorName" placeholder="Enter author name">
+                            <div class="form-one__control">
+                                <label for="blogTags">Tags</label>
+                                <input id="blogTags" type="text" name="blogTags" placeholder="immigration, visa, uk-law">
+                                <small class="bekenbeysolicitors-text-dark">Max 5 tags, comma-separated</small>
                             </div>
                         </div>
 
                         <!-- 📸 Media Section -->
-                        <div class="row" style="margin-top: 60px;">
+                        <div class="row mt-60 mb-40">
                             <div class="col-12">
-                                <div class="sec-title text-left" style="margin-bottom: 40px;">
+                                <div class="sec-title text-left">
                                     <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
                                         <div>
-                                            <i class="fas fa-images" style="font-size: 20px;"></i>
+                                            <i class="fas fa-images"></i>
                                         </div>
                                         Media Section
                                     </div>
@@ -252,32 +257,32 @@
                             </div>
                         </div>
 
-                        <div class="form-one__group">
+                        <div class="form-one__group mb-60">
                             <div class="form-one__control form-one__control--full">
-                                <label for="thumbnailImage" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Thumbnail Image Upload</label>
-                                <input id="thumbnailImage" type="file" name="thumbnailImage" accept="image/*" style="padding: 15px; border: 2px dashed #d4af37; background: #f9f9f9;">
+                                <label for="thumbnailImage">Thumbnail Image Upload</label>
+                                <input id="thumbnailImage" type="file" name="thumbnailImage" accept="image/*" class="background-gray">
                             </div>
 
-                            <div class="form-one__control form-one__control--full">
-                                <label for="thumbnailAlt" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Thumbnail Alt Text</label>
+                            <div class="form-one__control">
+                                <label for="thumbnailAlt">Thumbnail Alt Text</label>
                                 <input id="thumbnailAlt" type="text" name="thumbnailAlt" placeholder="Describe the image for SEO">
-                                <small style="display: block; margin-top: 5px; color: #666;">Important for accessibility and SEO</small>
+                                <small class="bekenbeysolicitors-text-dark">For accessibility and SEO</small>
                             </div>
 
-                            <div class="form-one__control form-one__control--full">
-                                <label for="additionalImages" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Additional Images (Optional)</label>
-                                <input id="additionalImages" type="file" name="additionalImages" accept="image/*" multiple style="padding: 15px; border: 2px dashed #d4af37; background: #f9f9f9;">
-                                <small style="display: block; margin-top: 5px; color: #666;">You can select multiple images</small>
+                            <div class="form-one__control">
+                                <label for="additionalImages">Additional Images (Optional)</label>
+                                <input id="additionalImages" type="file" name="additionalImages" accept="image/*" multiple class="background-gray">
+                                <small class="bekenbeysolicitors-text-dark">Multiple images allowed</small>
                             </div>
                         </div>
 
                         <!-- 🔍 SEO Section -->
-                        <div class="row" style="margin-top: 60px;">
+                        <div class="row mt-60 mb-40">
                             <div class="col-12">
-                                <div class="sec-title text-left" style="margin-bottom: 40px;">
+                                <div class="sec-title text-left">
                                     <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
                                         <div>
-                                            <i class="fas fa-search" style="font-size: 20px;"></i>
+                                            <i class="fas fa-search"></i>
                                         </div>
                                         SEO Section
                                     </div>
@@ -286,43 +291,43 @@
                             </div>
                         </div>
 
-                        <div class="form-one__group">
-                            <div class="form-one__control form-one__control--full">
-                                <label for="metaTitle" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Meta Title</label>
-                                <input id="metaTitle" type="text" name="metaTitle" placeholder="Auto-filled from blog title (editable)" maxlength="60">
-                                <small style="display: block; margin-top: 5px; color: #666;">
+                        <div class="form-one__group mb-60">
+                            <div class="form-one__control">
+                                <label for="metaTitle">Meta Title</label>
+                                <input id="metaTitle" type="text" name="metaTitle" placeholder="Auto-filled from blog title" maxlength="60">
+                                <small class="bekenbeysolicitors-text-dark">
                                     <span id="metaTitleCount">0</span>/60 characters
                                 </small>
                             </div>
 
+                            <div class="form-one__control">
+                                <label for="metaKeywords">Keywords</label>
+                                <input id="metaKeywords" type="text" name="metaKeywords" placeholder="Auto-filled from tags">
+                                <small class="bekenbeysolicitors-text-dark">Comma-separated keywords</small>
+                            </div>
+
                             <div class="form-one__control form-one__control--full">
-                                <label for="metaDescription" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Meta Description</label>
-                                <textarea id="metaDescription" name="metaDescription" placeholder="Auto-filled from first paragraph (editable)" rows="3" maxlength="160"></textarea>
-                                <small style="display: block; margin-top: 5px; color: #666;">
+                                <label for="metaDescription">Meta Description</label>
+                                <textarea id="metaDescription" name="metaDescription" placeholder="Auto-filled from first paragraph" rows="3" maxlength="160"></textarea>
+                                <small class="bekenbeysolicitors-text-dark">
                                     <span id="metaDescriptionCount">0</span>/160 characters
                                 </small>
                             </div>
 
                             <div class="form-one__control form-one__control--full">
-                                <label for="metaKeywords" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Keywords</label>
-                                <input id="metaKeywords" type="text" name="metaKeywords" placeholder="Auto-filled from tags (editable)">
-                                <small style="display: block; margin-top: 5px; color: #666;">Comma-separated keywords for SEO</small>
-                            </div>
-
-                            <div class="form-one__control form-one__control--full">
-                                <label for="canonicalUrl" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Canonical URL (Optional)</label>
+                                <label for="canonicalUrl">Canonical URL (Optional)</label>
                                 <input id="canonicalUrl" type="url" name="canonicalUrl" placeholder="https://www.bekenbeylaw.com/blog/...">
-                                <small style="display: block; margin-top: 5px; color: #666;">Leave blank to use default URL</small>
+                                <small class="bekenbeysolicitors-text-dark">Leave blank to use default URL</small>
                             </div>
                         </div>
 
                         <!-- ⚙️ Settings Section -->
-                        <div class="row" style="margin-top: 60px;">
+                        <div class="row mt-60 mb-40">
                             <div class="col-12">
-                                <div class="sec-title text-left" style="margin-bottom: 40px;">
+                                <div class="sec-title text-left">
                                     <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
                                         <div>
-                                            <i class="fas fa-cog" style="font-size: 20px;"></i>
+                                            <i class="fas fa-cog"></i>
                                         </div>
                                         Settings Section
                                     </div>
@@ -331,10 +336,10 @@
                             </div>
                         </div>
 
-                        <div class="form-one__group">
+                        <div class="form-one__group mb-40">
                             <div class="form-one__control form-one__control--full">
-                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Publish Status</label>
-                                <div class="login-page__checked-box" style="display: flex; gap: 30px; padding: 15px; background: #f9f9f9; border-radius: 5px;">
+                                <label>Publish Status</label>
+                                <div class="login-page__checked-box background-gray pt-20 pb-20 pl-30 pr-30" style="display: flex; gap: 40px;">
                                     <div class="login-page__checked">
                                         <input type="radio" name="publishStatus" id="statusDraft" value="draft" checked>
                                         <label for="statusDraft"><span></span>Draft</label>
@@ -346,30 +351,31 @@
                                 </div>
                             </div>
 
-                            <div class="form-one__control form-one__control--full">
-                                <label for="createdDate" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Created Date</label>
+                            <div class="form-one__control">
+                                <label for="createdDate">Created Date</label>
                                 <input id="createdDate" type="datetime-local" name="createdDate">
-                                <small style="display: block; margin-top: 5px; color: #666;">Auto-filled with current date and time</small>
+                                <small class="bekenbeysolicitors-text-dark">Auto-filled with current date</small>
                             </div>
 
-                            <div class="form-one__control form-one__control--full">
-                                <label for="updatedDate" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Updated Date</label>
-                                <input id="updatedDate" type="datetime-local" name="updatedDate" readonly style="background: #f0f0f0; cursor: not-allowed;">
-                                <small style="display: block; margin-top: 5px; color: #666;">Auto-updated automatically</small>
+                            <div class="form-one__control">
+                                <label for="updatedDate">Updated Date</label>
+                                <input id="updatedDate" type="datetime-local" name="updatedDate" readonly class="background-gray">
+                                <small class="bekenbeysolicitors-text-dark">Auto-updated automatically</small>
                             </div>
                         </div>
 
                         <!-- 💾 Actions -->
-                        <div class="form-one__group" style="margin-top: 40px;">
-                            <div class="form-one__control form-one__control--full">
-                                <button type="submit" class="bekenbeysolicitors-btn" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                        <div class="row mt-50">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="bekenbeysolicitors-btn">
                                     <i>Save Blog</i>
                                     <span>Save Blog</span>
                                 </button>
                             </div>
                         </div>
 
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -696,13 +702,13 @@
                 var length = $(inputSelector).val().length;
                 $(countSelector).text(length);
                 
-                // Change color if near or over limit
+                // Change color if near or over limit using inline styles
                 if (length > maxLength) {
-                    $(countSelector).css('color', 'red');
+                    $(countSelector).css('color', '#ef4444').css('font-weight', '600');
                 } else if (length > maxLength * 0.9) {
-                    $(countSelector).css('color', 'orange');
+                    $(countSelector).css('color', '#f59e0b').css('font-weight', '600');
                 } else {
-                    $(countSelector).css('color', '#666');
+                    $(countSelector).css('color', '').css('font-weight', '');
                 }
             }
 

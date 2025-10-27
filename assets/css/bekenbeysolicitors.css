@@ -16126,8 +16126,8 @@ body.megamenu-popup-active {
     bottom: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/shapes/page-header-shape.png);
-}
+/*    background-image: url(../images/shapes/page-header-shape.png);
+*/}
 
 .page-header .container {
     position: relative;

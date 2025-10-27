@@ -7,7 +7,7 @@ All scroll-based animation effects have been successfully removed from the websi
 
 ### 1. JavaScript Files Modified
 
-#### `assets/js/bekenbeysolicitors.js`
+#### `assets/js/bekenbeysolicitors-min.js`
 - **WOW.js Initialization**: Disabled (lines 342-351)
   - Commented out the WOW.js initialization that triggered fade/slide animations on scroll
 - **Progress Bar Animations**: Modified to trigger instantly (lines 40-47)
@@ -143,7 +143,7 @@ If animations need to be restored:
 
 1. Remove `<link rel="stylesheet" href="assets/css/no-animations.css" />` from all HTML files
 2. Uncomment the WOW.js initialization in both JavaScript files
-3. Restore the `.appear()` functions in `bekenbeysolicitors.js` (replace `.each()` with `.appear()`)
+3. Restore the `.appear()` functions in `bekenbeysolicitors-min.js` (replace `.each()` with `.appear()`)
 4. Delete or rename `assets/css/no-animations.css`
 
 ## Completion Status

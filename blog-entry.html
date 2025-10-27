@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-GB">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login || Bekenbey Solicitors || UK Immigration Experts</title>
+    <title>Blog Entry - Admin Panel || Bekenbey Solicitors</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Bekenbey Solicitors an ideal solution for all types of law firm and legal businesses. It is a professional and modern looking law HTML Template specially designed for lawyers, attorney, legal advisor, counsel, law firm, consulting business, legal office services and all other law related businesses & websites." />
+    <meta name="description" content="Admin panel for creating and managing blog posts at Bekenbey Solicitors." />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,6 @@
 
 <body class="custom-cursor">
 
-    
     
 
     <div class="preloader">
@@ -156,80 +155,225 @@
             <!-- <div class="page-header__shape"></div> -->
             <!-- /.page-header__shape -->
             <div class="container">
-                <h2 class="page-header__title bw-split-in-right">Login</h2>
+                <h2 class="page-header__title bw-split-in-right">Create New Blog Post</h2>
                 <ul class="bekenbeysolicitors-breadcrumb list-unstyled">
                     <li><a href="index.html">Home</a></li>
-                    <li><span>Login</span></li>
+                    <li><a href="blog-grid-right.html">Blog</a></li>
+                    <li><span>New Entry</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 
-        <!-- Login Start -->
-        <section class="login-page">
+        <!-- Blog Entry Start -->
+        <section class="contact-one" style="padding: 100px 0;">
             <div class="container">
-                <div class="login-page__info">
-
-                    <p>We have a Demo Account Setup. <span>Username:</span> <a href="login.html">demo</a> and <span>
-                            Password:</span> <a href="login.html">demo</a></p>
-                </div><!-- login-info -->
-                <div class="login-page__wrap">
-
-                    <div class="row">
-                        <div class="col-lg-6 wow fadeInUp animated" data-wow-delay="300ms">
-                            <form class="login-page__form" id="loginForm">
-                                <h3 class="login-page__wrap__title">Login</h3>
-                                <div id="loginError" class="alert alert-danger" style="display: none; margin-bottom: 20px;">
-                                    Invalid username or password. Please try again.
-                                </div>
-                                <div class="login-page__form-input-box">
-                                    <input type="text" id="loginUsername" name="username" placeholder="Username or email *" required>
-                                </div>
-                                <div class="login-page__form-input-box">
-                                    <input type="password" id="loginPassword" name="password" placeholder="Password *" required>
-                                </div>
-                                <div class="login-page__checked-box">
-                                    <div class="login-page__checked">
-                                        <input type="checkbox" name="save-data" id="save-data">
-                                        <label for="save-data"><span></span>Remember Me?</label>
-                                    </div>
-                                    <div class="login-page__form-forgot-password">
-                                        <a href="login.html">Forgot your Passowrd?</a>
-                                    </div>
-                                </div>
-                                <div class="login-page__form-btn-box">
-                                    <button type="submit" class="bekenbeysolicitors-btn"><i>Login</i><span>Login</span></button>
-                                </div>
-                            </form>
-                        </div><!-- login-form -->
-
-                        <div class="col-lg-6 wow fadeInUp animated" data-wow-delay="400ms">
-
-                            <form class="login-page__form login-page__form-right">
-                                <h3 class="login-page__wrap__title">Register</h3>
-                                <div class="login-page__form-input-box">
-                                    <input type="email" placeholder="Email Address">
-                                </div>
-                                <div class="login-page__form-input-box">
-                                    <input type="password" service="Password">
-                                </div>
-                                <div class="login-page__checked-box">
-                                    <input type="checkbox" name="accept-policy" id="accept-policy">
-                                    <label for="accept-policy"><span></span>I accept company privacy policy.</label>
-                                </div>
-                                <div class="login-page__form-btn-box">
-                                    <button type="submit" class="bekenbeysolicitors-btn">
-                                        <i>Register</i>
-                                        <span>Register</span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div><!-- register-form -->
-
+                <div class="contact-one__wrapper">
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="alert alert-success" style="display: none; margin-bottom: 30px;">
+                        <strong>Success!</strong> Blog successfully created.
                     </div>
+
+                    <form id="blogEntryForm" class="contact-one__form contact-form-validated form-one">
+                        
+                        <!-- 📝 Content Section -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="sec-title text-left" style="margin-bottom: 40px;">
+                                    <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
+                                        <div>
+                                            <i class="fas fa-edit" style="font-size: 20px;"></i>
+                                        </div>
+                                        Content Section
+                                    </div>
+                                    <h3 class="sec-title__title bw-split-in-up">Blog <span>Content Details</span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-one__group">
+                            <div class="form-one__control form-one__control--full">
+                                <label for="blogTitle" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Blog Title <span style="color: red;">*</span></label>
+                                <input id="blogTitle" type="text" name="blogTitle" placeholder="Enter blog title" required>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="blogSlug" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Slug / URL</label>
+                                <input id="blogSlug" type="text" name="blogSlug" placeholder="Auto-generated from title (editable)">
+                                <small style="display: block; margin-top: 5px; color: #666;">This will be auto-filled based on your title</small>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="blogContent" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Main Content <span style="color: red;">*</span></label>
+                                <textarea id="blogContent" name="blogContent" placeholder="Enter your blog content here (HTML supported)" rows="10" required></textarea>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="blogCategory" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Category</label>
+                                <select id="blogCategory" name="blogCategory" class="selectpicker">
+                                    <option value="">Select Category</option>
+                                    <option value="UK Immigration">UK Immigration</option>
+                                    <option value="Visa Updates">Visa Updates</option>
+                                    <option value="Legal Advice">Legal Advice</option>
+                                    <option value="Case Studies">Case Studies</option>
+                                    <option value="News">News</option>
+                                    <option value="Global Talent Visa">Global Talent Visa</option>
+                                    <option value="Innovator Founder Visa">Innovator Founder Visa</option>
+                                    <option value="Skilled Worker Visa">Skilled Worker Visa</option>
+                                    <option value="Student Visa">Student Visa</option>
+                                    <option value="Family Visa">Family Visa</option>
+                                </select>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="blogTags" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Tags</label>
+                                <input id="blogTags" type="text" name="blogTags" placeholder="immigration, visa, uk-law, legal-advice (comma-separated, max 5 tags)">
+                                <small style="display: block; margin-top: 5px; color: #666;">Enter up to 5 tags separated by commas</small>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="authorName" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Author Name</label>
+                                <input id="authorName" type="text" name="authorName" placeholder="Enter author name">
+                            </div>
+                        </div>
+
+                        <!-- 📸 Media Section -->
+                        <div class="row" style="margin-top: 60px;">
+                            <div class="col-12">
+                                <div class="sec-title text-left" style="margin-bottom: 40px;">
+                                    <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
+                                        <div>
+                                            <i class="fas fa-images" style="font-size: 20px;"></i>
+                                        </div>
+                                        Media Section
+                                    </div>
+                                    <h3 class="sec-title__title bw-split-in-up">Images <span>& Media</span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-one__group">
+                            <div class="form-one__control form-one__control--full">
+                                <label for="thumbnailImage" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Thumbnail Image Upload</label>
+                                <input id="thumbnailImage" type="file" name="thumbnailImage" accept="image/*" style="padding: 15px; border: 2px dashed #d4af37; background: #f9f9f9;">
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="thumbnailAlt" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Thumbnail Alt Text</label>
+                                <input id="thumbnailAlt" type="text" name="thumbnailAlt" placeholder="Describe the image for SEO">
+                                <small style="display: block; margin-top: 5px; color: #666;">Important for accessibility and SEO</small>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="additionalImages" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Additional Images (Optional)</label>
+                                <input id="additionalImages" type="file" name="additionalImages" accept="image/*" multiple style="padding: 15px; border: 2px dashed #d4af37; background: #f9f9f9;">
+                                <small style="display: block; margin-top: 5px; color: #666;">You can select multiple images</small>
+                            </div>
+                        </div>
+
+                        <!-- 🔍 SEO Section -->
+                        <div class="row" style="margin-top: 60px;">
+                            <div class="col-12">
+                                <div class="sec-title text-left" style="margin-bottom: 40px;">
+                                    <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
+                                        <div>
+                                            <i class="fas fa-search" style="font-size: 20px;"></i>
+                                        </div>
+                                        SEO Section
+                                    </div>
+                                    <h3 class="sec-title__title bw-split-in-up">Search Engine <span>Optimization</span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-one__group">
+                            <div class="form-one__control form-one__control--full">
+                                <label for="metaTitle" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Meta Title</label>
+                                <input id="metaTitle" type="text" name="metaTitle" placeholder="Auto-filled from blog title (editable)" maxlength="60">
+                                <small style="display: block; margin-top: 5px; color: #666;">
+                                    <span id="metaTitleCount">0</span>/60 characters
+                                </small>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="metaDescription" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Meta Description</label>
+                                <textarea id="metaDescription" name="metaDescription" placeholder="Auto-filled from first paragraph (editable)" rows="3" maxlength="160"></textarea>
+                                <small style="display: block; margin-top: 5px; color: #666;">
+                                    <span id="metaDescriptionCount">0</span>/160 characters
+                                </small>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="metaKeywords" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Keywords</label>
+                                <input id="metaKeywords" type="text" name="metaKeywords" placeholder="Auto-filled from tags (editable)">
+                                <small style="display: block; margin-top: 5px; color: #666;">Comma-separated keywords for SEO</small>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="canonicalUrl" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Canonical URL (Optional)</label>
+                                <input id="canonicalUrl" type="url" name="canonicalUrl" placeholder="https://www.bekenbeylaw.com/blog/...">
+                                <small style="display: block; margin-top: 5px; color: #666;">Leave blank to use default URL</small>
+                            </div>
+                        </div>
+
+                        <!-- ⚙️ Settings Section -->
+                        <div class="row" style="margin-top: 60px;">
+                            <div class="col-12">
+                                <div class="sec-title text-left" style="margin-bottom: 40px;">
+                                    <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
+                                        <div>
+                                            <i class="fas fa-cog" style="font-size: 20px;"></i>
+                                        </div>
+                                        Settings Section
+                                    </div>
+                                    <h3 class="sec-title__title bw-split-in-up">Publishing <span>Settings</span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-one__group">
+                            <div class="form-one__control form-one__control--full">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Publish Status</label>
+                                <div class="login-page__checked-box" style="display: flex; gap: 30px; padding: 15px; background: #f9f9f9; border-radius: 5px;">
+                                    <div class="login-page__checked">
+                                        <input type="radio" name="publishStatus" id="statusDraft" value="draft" checked>
+                                        <label for="statusDraft"><span></span>Draft</label>
+                                    </div>
+                                    <div class="login-page__checked">
+                                        <input type="radio" name="publishStatus" id="statusPublished" value="published">
+                                        <label for="statusPublished"><span></span>Published</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="createdDate" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Created Date</label>
+                                <input id="createdDate" type="datetime-local" name="createdDate">
+                                <small style="display: block; margin-top: 5px; color: #666;">Auto-filled with current date and time</small>
+                            </div>
+
+                            <div class="form-one__control form-one__control--full">
+                                <label for="updatedDate" style="display: block; margin-bottom: 8px; font-weight: 600; color: #1a1a1a;">Updated Date</label>
+                                <input id="updatedDate" type="datetime-local" name="updatedDate" readonly style="background: #f0f0f0; cursor: not-allowed;">
+                                <small style="display: block; margin-top: 5px; color: #666;">Auto-updated automatically</small>
+                            </div>
+                        </div>
+
+                        <!-- 💾 Actions -->
+                        <div class="form-one__group" style="margin-top: 40px;">
+                            <div class="form-one__control form-one__control--full">
+                                <button type="submit" class="bekenbeysolicitors-btn" style="width: 100%; max-width: 300px; margin: 0 auto; display: block;">
+                                    <i>Save Blog</i>
+                                    <span>Save Blog</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </section>
-        <!-- Login End -->
+        <!-- Blog Entry End -->
 
         <footer class="main-footer">
             <div class="main-footer__bg"></div>
@@ -302,8 +446,8 @@
                                     </button>
                                 </form><!-- /. mc-form -->
                                 <div class="footer-widget__check">
-                                    <input type="checkbox" checked="" name="save-data" id="save-data">
-                                    <label for="save-data"><span></span>I agree to the <a href="privacy-policy.html">Privacy Policy.</a></label>
+                                    <input type="checkbox" checked="" name="save-data" id="footer-save-data">
+                                    <label for="footer-save-data"><span></span>I agree to the <a href="privacy-policy.html">Privacy Policy.</a></label>
                                 </div>
                                 <div class="mc-form__response"></div><!-- /.mc-form__response -->
                                 <!-- /.footer-widget__text -->
@@ -433,7 +577,7 @@
         <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
             <form role="search" method="get" class="search-popup__form" action="#">
-                <input type="text" id="search" service="Search Here..." />
+                <input type="text" id="search" placeholder="Search Here..." />
                 <button type="submit" aria-label="search submit" class="bekenbeysolicitors-btn">
                     <i><i class="icon-search"></i></i><span><i class="icon-search"></i></span>
                 </button>
@@ -478,38 +622,215 @@
     <script src="assets/vendors/gsap/bekenbeysolicitors-split.js"></script>
     <!-- template js -->
     <script src="assets/js/bekenbeysolicitors-min.js"></script>
-    
-    <!-- Login Form Handler -->
+
+    <!-- Blog Entry Form Scripts -->
     <script>
         jQuery(document).ready(function($) {
-            $('#loginForm').on('submit', function(e) {
+            
+            // Check if user is logged in
+            var isLoggedIn = sessionStorage.getItem('isLoggedIn');
+            if (!isLoggedIn || isLoggedIn !== 'true') {
+                // Redirect to login page if not logged in
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            // Display welcome message (optional)
+            var username = sessionStorage.getItem('username');
+            if (username) {
+                console.log('Welcome, ' + username + '!');
+            }
+            
+            // Auto-generate slug from blog title
+            $('#blogTitle').on('input', function() {
+                var title = $(this).val();
+                var slug = title.toLowerCase()
+                    .replace(/[^\w\s-]/g, '')
+                    .replace(/\s+/g, '-')
+                    .replace(/-+/g, '-')
+                    .trim();
+                $('#blogSlug').val(slug);
+                
+                // Auto-fill meta title
+                if ($('#metaTitle').val() === '' || $('#metaTitle').data('auto-filled')) {
+                    $('#metaTitle').val(title).data('auto-filled', true);
+                    updateCharCount('#metaTitle', '#metaTitleCount', 60);
+                }
+            });
+
+            // Auto-fill meta description from content
+            $('#blogContent').on('input', function() {
+                var content = $(this).val();
+                // Strip HTML tags and get first 160 characters
+                var plainText = content.replace(/<[^>]*>/g, '').trim();
+                var excerpt = plainText.substring(0, 160);
+                
+                if ($('#metaDescription').val() === '' || $('#metaDescription').data('auto-filled')) {
+                    $('#metaDescription').val(excerpt).data('auto-filled', true);
+                    updateCharCount('#metaDescription', '#metaDescriptionCount', 160);
+                }
+            });
+
+            // Auto-fill keywords from tags
+            $('#blogTags').on('input', function() {
+                var tags = $(this).val();
+                if ($('#metaKeywords').val() === '' || $('#metaKeywords').data('auto-filled')) {
+                    $('#metaKeywords').val(tags).data('auto-filled', true);
+                }
+            });
+
+            // Character count for meta title
+            $('#metaTitle').on('input', function() {
+                $(this).data('auto-filled', false);
+                updateCharCount('#metaTitle', '#metaTitleCount', 60);
+            });
+
+            // Character count for meta description
+            $('#metaDescription').on('input', function() {
+                $(this).data('auto-filled', false);
+                updateCharCount('#metaDescription', '#metaDescriptionCount', 160);
+            });
+
+            // Function to update character count
+            function updateCharCount(inputSelector, countSelector, maxLength) {
+                var length = $(inputSelector).val().length;
+                $(countSelector).text(length);
+                
+                // Change color if near or over limit
+                if (length > maxLength) {
+                    $(countSelector).css('color', 'red');
+                } else if (length > maxLength * 0.9) {
+                    $(countSelector).css('color', 'orange');
+                } else {
+                    $(countSelector).css('color', '#666');
+                }
+            }
+
+            // Set current date and time
+            var now = new Date();
+            var dateTimeString = now.toISOString().slice(0, 16);
+            $('#createdDate').val(dateTimeString);
+
+            // Form submission
+            $('#blogEntryForm').on('submit', function(e) {
                 e.preventDefault();
                 
-                var username = $('#loginUsername').val().trim();
-                var password = $('#loginPassword').val().trim();
+                // Validate required fields
+                var blogTitle = $('#blogTitle').val().trim();
+                var blogContent = $('#blogContent').val().trim();
                 
-                // Demo credentials check
-                if (username === 'demo@demo.com' && password === 'demo') {
-                    // Store login state in sessionStorage
-                    sessionStorage.setItem('isLoggedIn', 'true');
-                    sessionStorage.setItem('username', username);
-                    
-                    // Redirect to blog entry page
-                    window.location.href = 'blog-entry.html';
-                } else {
-                    // Show error message
-                    $('#loginError').fadeIn();
-                    
-                    // Hide error after 5 seconds
-                    setTimeout(function() {
-                        $('#loginError').fadeOut();
-                    }, 5000);
+                if (!blogTitle) {
+                    alert('Please enter a blog title.');
+                    $('#blogTitle').focus();
+                    return false;
                 }
+                
+                if (!blogContent) {
+                    alert('Please enter blog content.');
+                    $('#blogContent').focus();
+                    return false;
+                }
+
+                // Validate tags (max 5)
+                var tags = $('#blogTags').val().trim();
+                if (tags) {
+                    var tagArray = tags.split(',').map(function(tag) {
+                        return tag.trim();
+                    }).filter(function(tag) {
+                        return tag !== '';
+                    });
+                    
+                    if (tagArray.length > 5) {
+                        alert('Maximum 5 tags allowed. You have entered ' + tagArray.length + ' tags.');
+                        $('#blogTags').focus();
+                        return false;
+                    }
+                }
+
+                // Validate slug uniqueness (in a real application, this would be an AJAX call to the server)
+                var slug = $('#blogSlug').val().trim();
+                if (!slug) {
+                    alert('Please enter a valid slug/URL.');
+                    $('#blogSlug').focus();
+                    return false;
+                }
+
+                // Update the updated date
+                var updateTime = new Date().toISOString().slice(0, 16);
+                $('#updatedDate').val(updateTime);
+
+                // Collect all form data
+                var formData = {
+                    blogTitle: blogTitle,
+                    blogSlug: slug,
+                    blogContent: blogContent,
+                    blogCategory: $('#blogCategory').val(),
+                    blogTags: tags,
+                    authorName: $('#authorName').val(),
+                    thumbnailAlt: $('#thumbnailAlt').val(),
+                    metaTitle: $('#metaTitle').val(),
+                    metaDescription: $('#metaDescription').val(),
+                    metaKeywords: $('#metaKeywords').val(),
+                    canonicalUrl: $('#canonicalUrl').val(),
+                    publishStatus: $('input[name="publishStatus"]:checked').val(),
+                    createdDate: $('#createdDate').val(),
+                    updatedDate: $('#updatedDate').val()
+                };
+
+                // Log the form data (in production, this would be sent to a server)
+                console.log('Blog Entry Data:', formData);
+                console.log('Thumbnail Image:', $('#thumbnailImage')[0].files[0]);
+                console.log('Additional Images:', $('#additionalImages')[0].files);
+
+                // Show success message
+                $('#successMessage').fadeIn();
+                
+                // Scroll to top to show success message
+                $('html, body').animate({
+                    scrollTop: $('#successMessage').offset().top - 100
+                }, 500);
+
+                // Hide message after 5 seconds
+                setTimeout(function() {
+                    $('#successMessage').fadeOut();
+                }, 5000);
+
+                // In a production environment, you would:
+                // 1. Send this data to your backend API using AJAX
+                // 2. Handle file uploads separately
+                // 3. Validate slug uniqueness on the server
+                // 4. Save to database
+                // 5. Redirect to blog management page or the new blog post
+
+                /*
+                // Example AJAX submission (uncomment and modify for production):
+                $.ajax({
+                    url: 'your-backend-api-endpoint.php',
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        $('#successMessage').fadeIn();
+                        // Optionally redirect after successful save
+                        // window.location.href = 'blog-grid-right.html';
+                    },
+                    error: function(xhr, status, error) {
+                        alert('An error occurred while saving the blog post. Please try again.');
+                        console.error('Error:', error);
+                    }
+                });
+                */
                 
                 return false;
             });
+
+            // Allow manual editing of SEO fields
+            $('#metaTitle, #metaDescription, #metaKeywords').on('focus', function() {
+                $(this).data('auto-filled', false);
+            });
+
         });
     </script>
 </body>
 
 </html>
+

@@ -3841,7 +3841,7 @@ h6 {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    color: var(--bekenbeysolicitors-text-dark, #7782A0);
+    color: var(--bekenbeysolicitors-white, #fff);
     padding-top: 23px;
 }
 
@@ -3878,7 +3878,7 @@ h6 {
     font-weight: 500;
     font-size: 16px;
     line-height: 29.41px;
-    color: var(--bekenbeysolicitors-text-dark, #7782A0);
+    color: var(--bekenbeysolicitors-white, #fff);
     margin-bottom: 0;
 }
 
@@ -3974,7 +3974,7 @@ h6 {
     margin: 0;
     font-weight: 500;
     font-size: 16px;
-    color: var(--bekenbeysolicitors-text-dark, #7782A0);
+    color: var(--bekenbeysolicitors-white, #fff);
 }
 
 .footer-widget {

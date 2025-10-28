@@ -24171,15 +24171,161 @@ body.boxed-wrapper {
     }
 }
 
-@media (max-width: 767px) {
-    .chatbot-panel__header__title {
-        font-size: 20px;
+@media (max-width: 767px) { 
+    .chatbot-panel__header__title { 
+        font-size: 20px; 
+    } 
+     
+    .chatbot-panel__close { 
+        width: 35px; 
+        height: 35px; 
+        font-size: 18px; 
+    } 
+} 
+
+/* Work Process Table Section - SEO Optimized */
+.work-process-table {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.work-process-table__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.work-process-table__item {
+    background-color: #f8f9fa;
+    padding: 28px 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.work-process-table__item:hover {
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+    transform: translateY(-3px);
+    border-color: #2563eb;
+}
+
+.work-process-table__item__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 14px;
+    line-height: 1.3;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-process-table__item__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 0;
+}
+
+/* Large Desktop - 5 columns */
+@media (min-width: 1200px) {
+    .work-process-table__grid {
+        gap: 24px;
     }
     
-    .chatbot-panel__close {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
+    .work-process-table__item {
+        padding: 32px 22px;
+    }
+    
+    .work-process-table__item__title {
+        font-size: 19px;
+    }
+    
+    .work-process-table__item__text {
+        font-size: 15px;
     }
 }
+
+/* Tablet - 3 columns then 2 */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .work-process-table {
+        padding: 60px 0;
+    }
+    
+    .work-process-table__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+    
+    .work-process-table__item {
+        padding: 24px 18px;
+    }
+    
+    .work-process-table__item__title {
+        font-size: 17px;
+        min-height: 44px;
+    }
+    
+    .work-process-table__item__text {
+        font-size: 13px;
+    }
+}
+
+/* Small Tablet - 2 columns */
+@media (min-width: 576px) and (max-width: 767px) {
+    .work-process-table {
+        padding: 55px 0;
+    }
+    
+    .work-process-table__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 35px;
+    }
+    
+    .work-process-table__item {
+        padding: 22px 16px;
+    }
+    
+    .work-process-table__item__title {
+        font-size: 16px;
+        min-height: 42px;
+    }
+    
+    .work-process-table__item__text {
+        font-size: 13px;
+    }
+}
+
+/* Mobile - single column stacked */
+@media (max-width: 575px) {
+    .work-process-table {
+        padding: 50px 0;
+    }
+    
+    .work-process-table__grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 30px;
+    }
+    
+    .work-process-table__item {
+        padding: 20px 18px;
+        text-align: left;
+    }
+    
+    .work-process-table__item__title {
+        font-size: 17px;
+        min-height: auto;
+        justify-content: flex-start;
+    }
+    
+    .work-process-table__item__text {
+        font-size: 14px;
+    }
+}
+
 /*# sourceMappingURL=bekenbeysolicitors.css.map */

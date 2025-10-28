@@ -57,7 +57,7 @@ All pages have been updated with unique, keyword-optimized titles (50-60 charact
 
 ### High Priority:
 1. **Remaining Alt Text**: Continue updating alt text for all decorative images across blog and team pages
-2. **Blog Pages**: Review and optimize `blog-grid-right.html` and `blog-details-right.html` with proper meta descriptions
+2. **Blog Pages**: Review and optimize `blog-list.html` and `blog-details.html` with proper meta descriptions
 3. **Team Pages**: Optimize `team.html`, `team-carousel.html`, and `team-details.html` titles and descriptions
 4. **404 Page**: Add proper SEO meta tags to `404.html`
 5. **Login Page**: Consider noindexing `login.html` in robots.txt or adding noindex meta tag

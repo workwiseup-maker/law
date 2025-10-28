@@ -68,8 +68,8 @@ Added the `no-animations.css` stylesheet to all HTML pages in the `<head>` secti
 - team-details.html
 
 #### Blog Pages (2 files):
-- blog-grid-right.html
-- blog-details-right.html
+- blog-list.html
+- blog-details.html
 
 #### Project Pages (2 files):
 - project-carousel.html

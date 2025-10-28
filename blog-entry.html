@@ -1432,9 +1432,13 @@
                 function() {
                     const formData = getFormData();
                     formData.status = 'draft';
+                    formData.id = Date.now().toString();
+                    formData.publishDate = new Date().toISOString();
+                    saveBlogPost(formData);
                     console.log('Saving draft:', formData);
                     showNotification('Draft saved successfully!', 'success');
                     closeModal();
+                    setTimeout(() => { window.location.href = 'blog-list.html'; }, 1500);
                 }
             );
         }
@@ -1452,13 +1456,29 @@
                 function() {
                     const formData = getFormData();
                     formData.status = 'published';
+                    formData.id = Date.now().toString();
+                    formData.publishDate = new Date().toISOString();
+                    saveBlogPost(formData);
                     console.log('Publishing blog:', formData);
                     showNotification('Blog post published successfully!', 'success');
                     closeModal();
-                    // Here you would typically submit to a backend API
-                    // window.location.href = 'blog-list.html';
+                    setTimeout(() => { window.location.href = 'blog-list.html'; }, 1500);
                 }
             );
+        }
+
+        // Save blog post to localStorage
+        function saveBlogPost(postData) {
+            let blogPosts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
+            const existingIndex = blogPosts.findIndex(post => post.id === postData.id);
+            
+            if (existingIndex > -1) {
+                blogPosts[existingIndex] = postData;
+            } else {
+                blogPosts.unshift(postData);
+            }
+            
+            localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
         }
 
         // Get Form Data

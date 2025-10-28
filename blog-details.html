@@ -4,13 +4,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Details || Bekenbey Solicitors || UK Immigration Experts</title>
+    <title id="pageTitle">Blog Details || Bekenbey Solicitors || UK Immigration Experts</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Bekenbey Solicitors an ideal solution for all types of law firm and legal businesses. It is a professional and modern looking law HTML Template specially designed for lawyers, attorney, legal advisor, counsel, law firm, consulting business, legal office services and all other law related businesses & websites." />
+    <meta name="description" content="Bekenbey Solicitors an ideal solution for all types of law firm and legal businesses. It is a professional and modern looking law HTML Template specially designed for lawyers, attorney, legal advisor, counsel, law firm, consulting business, legal office services and all other law related businesses & websites." id="metaDescription" />
+    <meta name="keywords" content="" id="metaKeywords" />
+    <link rel="canonical" href="" id="canonicalLink" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" id="ogUrl" />
+    <meta property="og:title" content="" id="ogTitle" />
+    <meta property="og:description" content="" id="ogDescription" />
+    <meta property="og:image" content="" id="ogImage" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Bekenbey Solicitors" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" id="twitterUrl" />
+    <meta property="twitter:title" content="" id="twitterTitle" />
+    <meta property="twitter:description" content="" id="twitterDescription" />
+    <meta property="twitter:image" content="" id="twitterImage" />
+    
+    <!-- Article Published & Modified Time -->
+    <meta property="article:published_time" content="" id="publishedTime" />
+    <meta property="article:modified_time" content="" id="modifiedTime" />
+    <meta property="article:author" content="" id="articleAuthor" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,10 +179,11 @@
             <!-- <div class="page-header__shape"></div> -->
             <!-- /.page-header__shape -->
             <div class="container">
-                <h2 class="page-header__title bw-split-in-right">Blog Details</h2>
+                <h2 class="page-header__title bw-split-in-right" id="pageTitleHeader">Blog Details</h2>
                 <ul class="bekenbeysolicitors-breadcrumb list-unstyled">
                     <li><a href="index.html">Home</a></li>
-                    <li><span>Blog Details</span></li>
+                    <li><a href="blog-list.html">Blog</a></li>
+                    <li><span id="breadcrumbTitle">Blog Details</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
             </div><!-- /.container -->
         </section><!-- /.page-header -->
@@ -168,113 +192,59 @@
             <div class="container">
                 <div class="row gutter-y-60">
                     <div class="col-lg-8">
-                        <div class="blog-details__wrapper">
+                        <!-- Back to Blog List Button -->
+                        <div style="margin-bottom: 30px;">
+                            <a href="blog-list.html" class="bekenbeysolicitors-btn" style="display: inline-block;">
+                                <i><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Blog List</i>
+                                <span><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Blog List</span>
+                            </a>
+                        </div>
+                        
+                        <article class="blog-details__wrapper">
                             <div class="blog-details__image">
-                                <img src="assets/images/blog/blog-details-1.jpg" alt="bekenbeysolicitors">
-                                <div class="blog-details__date">
-                                    <h4>04</h4><span>jan</span>
+                                <img src="assets/images/blog/blog-details-1.jpg" alt="" id="blogFeaturedImage">
+                                <div class="blog-details__date" id="blogDateBadge">
+                                    <h4 id="blogDay">04</h4><span id="blogMonth">jan</span>
                                 </div><!-- /.blog-details__date -->
                             </div><!-- blog-details__image -->
                             <div class="blog-details__content">
 
                                 <ul class="list-unstyled blog-details__meta">
-                                    <li><i class="icon-user"></i>by <a href="blog-details.html">Admin</a></li>
-                                    <li></li>
-                                    <li><i class="icon-bubble-chat-1"></i>13 Comments</li>
+                                    <li><i class="icon-user"></i>by <span id="blogAuthor">Admin</span></li>
+                                    <li><i class="icon-clock"></i><span id="blogPublishDate">January 4, 2025</span></li>
+                                    <li id="blogCategoryMeta"><i class="icon-folder"></i><span id="blogCategory">Category</span></li>
                                 </ul><!-- /.list-unstyled blog-details__meta -->
-                                <h3 class="blog-details__title">10 Simple Practices that Will Help You Get 1% </h3>
+                                <h1 class="blog-details__title" id="blogTitle">Blog Post Title</h1>
                                 <!-- /.blog-details__title -->
-                                <p class="blog-details__text">
-                                    Expert guidance dolor sit amet dedicated to your success sed do eiusmod tempor incididunt ut labore et
-                                    comprehensive immigration expertise and professional guidance. All the Immigration Services generators on the Internet
-                                    tend
-                                    to repeat predefined chunks as necessary, making this the first true generator on the Internet.
-                                </p><!-- /.blog-details__text -->
-                                <p class="blog-details__text">
-                                    There are many variations of passages of Immigration Services available, but the majority have
-                                    suffered it alteration in some form, by injected humour, or randomised words which don't
-                                    look evenslightly professional service. If you are going to use a passage of nor again.
-                                </p><!-- /.blog-details__text -->
+                                
+                                <div id="blogContentArea" class="blog-details__text">
+                                    <!-- Blog content will be loaded here dynamically -->
+                                </div><!-- /.blog-details__text -->
 
-
-                                <div class="blog-details__post-meta">
-                                    <div class="blog-details__posts">
-                                        <h4 class="blog-details__posts__title">Post In:</h4><!-- /.blog-details__tags__title -->
-                                        <div class="sidebar__posts">
-                                            <a href="blog-details.html">Attorneys</a>
-                                            <a href="blog-details.html">Agency</a>
-                                        </div><!-- /.sidebar__projects -->
-                                    </div><!-- /.blog-details__tags -->
+                                <div class="blog-details__post-meta" id="blogMetaSection" style="display: none;">
                                     <div class="blog-details__tags">
                                         <h4 class="blog-details__tags__title">Tags:</h4><!-- /.blog-details__tags__title -->
-                                        <div class="sidebar__tags">
-                                            <a href="blog-details.html">Safty,</a>
-                                            <a href="blog-details.html"> Learning</a>
-                                        </div><!-- /.sidebar__projects -->
+                                        <div class="sidebar__tags" id="blogTagsContainer">
+                                            <!-- Tags will be loaded here -->
+                                        </div><!-- /.sidebar__tags -->
+                                    </div><!-- /.blog-details__tags -->
+                                    <div class="blog-details__posts" style="margin-left: 30px;">
+                                        <h4 class="blog-details__posts__title">Category:</h4><!-- /.blog-details__tags__title -->
+                                        <div class="sidebar__posts">
+                                            <span id="blogCategoryDisplay" style="padding: 8px 15px; background-color: var(--bekenbeysolicitors-gray); border-radius: 3px; display: inline-block;">Category</span>
+                                        </div><!-- /.sidebar__posts -->
                                     </div><!-- /.blog-details__tags -->
                                 </div><!-- /.blog-details__post-meta -->
-                                <div class="comments-one">
-                                    <h3 class="comments-one__title"> 2 Comments</h3><!-- /.comments-one__title -->
-                                    <ul class="list-unstyled comments-one__list">
-                                        <li class="comments-one__card">
-                                            <div class="comments-one__card__image">
-                                                <img src="assets/images/blog/blog-comment-1-1.jpg" alt="bekenbeysolicitors">
-                                            </div><!-- /.comments-one__card__image -->
-                                            <div class="comments-one__card__content">
-                                                <h3 class="comments-one__card__title">Alen Zoey</h3><!-- /.comments-one__card__title -->
-
-                                                <p class="comments-one__card__text">
-                                                    Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id magna hendrerit
-                                                    sagittis. Nullam sed mi non odio feugiat volutpat sit amet nec elit.Nisl bibendum accumsan
-                                                    vitae vitae
-                                                </p><!-- /.comments-one__card__text -->
-                                                <div class="comments-one__card__btn">
-                                                    <a href="blog-details.html" class="bekenbeysolicitors-btn"><i>Reply</i><span>Reply</span></a>
-                                                </div><!-- /.comments-one__card__btn -->
-                                            </div><!-- /.comments-one__card__content -->
-                                        </li><!-- /.comments-one__card -->
-                                        <li class="comments-one__card">
-                                            <div class="comments-one__card__image">
-                                                <img src="assets/images/blog/blog-comment-1-2.jpg" alt="bekenbeysolicitors">
-                                            </div><!-- /.comments-one__card__image -->
-                                            <div class="comments-one__card__content">
-                                                <h3 class="comments-one__card__title">Jack Wiliam</h3><!-- /.comments-one__card__title -->
-
-                                                <p class="comments-one__card__text">
-                                                    Nam vel lacus eu nisl bibendum accumsan vitae vitae nibh. Nam nec eros id magna hendrerit
-                                                    sagittis. Nullam sed mi non odio feugiat volutpat sit amet nec elit.Nisl bibendum accumsan
-                                                    vitae vitae
-                                                </p><!-- /.comments-one__card__text -->
-                                                <div class="comments-one__card__btn">
-                                                    <a href="blog-details.html" class="bekenbeysolicitors-btn"><i>Reply</i><span>Reply</span></a>
-                                                </div><!-- /.comments-one__card__btn -->
-                                            </div><!-- /.comments-one__card__content -->
-                                        </li><!-- /.comments-one__card -->
-                                    </ul><!-- /.list-unstyled comments-one__list -->
-                                </div><!-- /.comments-one -->
-                                <div class="comments-form">
-                                    <h3 class="comments-form__title">Leave a Comment</h3><!-- /.comments-form__title -->
-                                    <form class="comments-form__form contact-form-validated form-one">
-                                        <div class="form-one__group">
-                                            <div class="form-one__control ">
-                                                <input type="text" name="name" service="Full Name*">
-                                            </div><!-- /.form-one__control -->
-                                            <div class="form-one__control ">
-                                                <input type="email" name="email" placeholder="Email Address*">
-                                            </div><!-- /.form-one__control -->
-                                            <div class="form-one__control form-one__control--full">
-                                                <textarea name="message" service="Your Comments *"></textarea><!-- /# -->
-                                            </div><!-- /.form-one__control -->
-                                            <div class="form-one__control form-one__control--full">
-                                                <button type="submit" class="bekenbeysolicitors-btn"><i>Post Comment</i><span>Post
-                                                        Comment</span></button>
-                                            </div><!-- /.form-one__control -->
-                                        </div><!-- /.form-one__group -->
-                                    </form>
-                                    <div class="result"></div>
-                                </div><!-- /.comments-form -->
+                                
+                                <!-- Back to Blog List Button at Bottom -->
+                                <div style="margin-top: 50px; padding-top: 30px; border-top: 2px solid var(--bekenbeysolicitors-gray2);">
+                                    <a href="blog-list.html" class="bekenbeysolicitors-btn">
+                                        <i><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Blog List</i>
+                                        <span><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Blog List</span>
+                                    </a>
+                                </div>
                             </div>
-                        </div><!-- /.blog-details -->
+                        </article><!-- /.blog-details -->
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
                         <div class="sidebar">
@@ -695,6 +665,210 @@
     <script src="assets/vendors/gsap/bekenbeysolicitors-split.js"></script>
     <!-- template js -->
     <script src="assets/js/bekenbeysolicitors-min.js"></script>
+
+    <!-- Blog Details Dynamic Loading Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadBlogPost();
+        });
+
+        function loadBlogPost() {
+            // Get blog post ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+            
+            if (!postId) {
+                // Redirect to blog list if no ID provided
+                window.location.href = 'blog-list.html';
+                return;
+            }
+            
+            // Get blog posts from localStorage
+            const blogPosts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
+            const post = blogPosts.find(p => p.id === postId);
+            
+            if (!post) {
+                // Redirect to blog list if post not found
+                alert('Blog post not found.');
+                window.location.href = 'blog-list.html';
+                return;
+            }
+            
+            // Update page title and meta tags
+            updateMetaTags(post);
+            
+            // Update breadcrumb
+            const breadcrumbTitle = document.getElementById('breadcrumbTitle');
+            if (breadcrumbTitle) {
+                breadcrumbTitle.textContent = truncateText(post.blogTitle, 50);
+            }
+            
+            const pageTitleHeader = document.getElementById('pageTitleHeader');
+            if (pageTitleHeader) {
+                pageTitleHeader.textContent = post.blogTitle || 'Blog Details';
+            }
+            
+            // Update featured image
+            const featuredImg = document.getElementById('blogFeaturedImage');
+            if (featuredImg) {
+                const imageUrl = getImageUrl(post);
+                featuredImg.src = imageUrl;
+                featuredImg.alt = post.imageAltText || post.blogTitle;
+            }
+            
+            // Update date badge
+            const date = new Date(post.publishDate || post.lastUpdated);
+            const dayEl = document.getElementById('blogDay');
+            const monthEl = document.getElementById('blogMonth');
+            if (dayEl && monthEl) {
+                dayEl.textContent = String(date.getDate()).padStart(2, '0');
+                monthEl.textContent = date.toLocaleDateString('en-US', { month: 'short' });
+            }
+            
+            // Update author
+            const authorEl = document.getElementById('blogAuthor');
+            if (authorEl) {
+                authorEl.textContent = post.author || 'Admin';
+            }
+            
+            // Update publish date
+            const publishDateEl = document.getElementById('blogPublishDate');
+            if (publishDateEl) {
+                publishDateEl.textContent = date.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+            }
+            
+            // Update category
+            const categoryEl = document.getElementById('blogCategory');
+            const categoryDisplay = document.getElementById('blogCategoryDisplay');
+            if (categoryEl && post.category) {
+                const formattedCategory = formatCategory(post.category);
+                categoryEl.textContent = formattedCategory;
+                if (categoryDisplay) {
+                    categoryDisplay.textContent = formattedCategory;
+                }
+            }
+            
+            // Update blog title (H1)
+            const titleEl = document.getElementById('blogTitle');
+            if (titleEl) {
+                titleEl.textContent = post.blogTitle || 'Untitled Post';
+            }
+            
+            // Update blog content
+            const contentArea = document.getElementById('blogContentArea');
+            if (contentArea && post.blogContent) {
+                contentArea.innerHTML = post.blogContent;
+            }
+            
+            // Update tags if available
+            if (post.tags || post.additionalKeywords) {
+                const metaSection = document.getElementById('blogMetaSection');
+                const tagsContainer = document.getElementById('blogTagsContainer');
+                
+                if (metaSection && tagsContainer) {
+                    const tags = (post.tags || post.additionalKeywords || '').split(',').filter(t => t.trim());
+                    if (tags.length > 0) {
+                        metaSection.style.display = 'flex';
+                        tagsContainer.innerHTML = '';
+                        tags.forEach(tag => {
+                            const tagLink = document.createElement('a');
+                            tagLink.href = '#';
+                            tagLink.textContent = tag.trim();
+                            tagLink.onclick = (e) => e.preventDefault();
+                            tagsContainer.appendChild(tagLink);
+                        });
+                    }
+                }
+            }
+        }
+
+        function updateMetaTags(post) {
+            // Update page title
+            const pageTitle = document.getElementById('pageTitle');
+            if (pageTitle) {
+                pageTitle.textContent = `${post.blogTitle || 'Blog Post'} || Bekenbey Solicitors`;
+            }
+            
+            // Update meta description
+            const metaDesc = document.getElementById('metaDescription');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', post.metaDescription || '');
+            }
+            
+            // Update keywords
+            const metaKeywords = document.getElementById('metaKeywords');
+            if (metaKeywords) {
+                const keywords = [post.focusKeyword, post.additionalKeywords].filter(k => k).join(', ');
+                metaKeywords.setAttribute('content', keywords);
+            }
+            
+            // Update canonical URL
+            const canonical = document.getElementById('canonicalLink');
+            if (canonical) {
+                const currentUrl = window.location.href;
+                canonical.setAttribute('href', post.canonicalUrl || currentUrl);
+            }
+            
+            // Update Open Graph tags
+            const ogUrl = document.getElementById('ogUrl');
+            const ogTitle = document.getElementById('ogTitle');
+            const ogDesc = document.getElementById('ogDescription');
+            const ogImg = document.getElementById('ogImage');
+            
+            if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+            if (ogTitle) ogTitle.setAttribute('content', post.ogTitle || post.blogTitle || '');
+            if (ogDesc) ogDesc.setAttribute('content', post.ogDescription || post.metaDescription || '');
+            if (ogImg) ogImg.setAttribute('content', getImageUrl(post));
+            
+            // Update Twitter tags
+            const twitterUrl = document.getElementById('twitterUrl');
+            const twitterTitle = document.getElementById('twitterTitle');
+            const twitterDesc = document.getElementById('twitterDescription');
+            const twitterImg = document.getElementById('twitterImage');
+            
+            if (twitterUrl) twitterUrl.setAttribute('content', window.location.href);
+            if (twitterTitle) twitterTitle.setAttribute('content', post.twitterTitle || post.ogTitle || post.blogTitle || '');
+            if (twitterDesc) twitterDesc.setAttribute('content', post.twitterDescription || post.ogDescription || post.metaDescription || '');
+            if (twitterImg) twitterImg.setAttribute('content', getImageUrl(post));
+            
+            // Update article time tags
+            const publishedTime = document.getElementById('publishedTime');
+            const modifiedTime = document.getElementById('modifiedTime');
+            const articleAuthor = document.getElementById('articleAuthor');
+            
+            if (publishedTime) publishedTime.setAttribute('content', post.publishDate || post.lastUpdated || '');
+            if (modifiedTime) modifiedTime.setAttribute('content', post.lastUpdated || post.publishDate || '');
+            if (articleAuthor) articleAuthor.setAttribute('content', post.author || 'Bekenbey Solicitors');
+        }
+
+        function getImageUrl(post) {
+            if (post.ogImage && typeof post.ogImage === 'string') {
+                return post.ogImage;
+            }
+            if (post.featuredImageUrl && post.featuredImageUrl.trim()) {
+                return post.featuredImageUrl;
+            }
+            if (post.featuredImage && typeof post.featuredImage === 'string') {
+                return post.featuredImage;
+            }
+            return 'assets/images/blog/blog-details-1.jpg';
+        }
+
+        function formatCategory(category) {
+            return category.split('-').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ');
+        }
+
+        function truncateText(text, maxLength) {
+            if (!text) return '';
+            return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+        }
+    </script>
 </body>
 
 </html>

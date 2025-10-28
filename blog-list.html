@@ -185,222 +185,45 @@
             <div class="container">
                 <div class="row gutter-y-60">
                     <div class="col-lg-8">
-                        <div class="row gutter-y-30">
+                        <div class="row gutter-y-30" id="blogPostsContainer">
+                            <!-- Blog posts will be loaded here dynamically -->
+                            <div class="col-12 text-center" id="noBlogsMessage" style="display: none; padding: 60px 0;">
+                                <p style="font-size: 18px; color: var(--bekenbeysolicitors-text-gray); margin-bottom: 20px;">No blog posts found.</p>
+                                <a href="blog-entry.html" class="bekenbeysolicitors-btn">
+                                    <i>Create Your First Post</i><span>Create Your First Post</span>
+                                </a>
+                                            </div>
+                            
+                            <!-- Template for blog cards (hidden, will be cloned by JavaScript) -->
+                            <template id="blogCardTemplate">
                             <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                                    <article class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
                                     <div class="blog-card__content">
                                         <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
+                                                <img src="assets/images/blog/blog-user-1.jpg" alt="" class="blog-card__user__img blog-author-img">
                                             <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
-                                            </div>
+                                                    <h3 class="blog-card__user__name blog-author-name">Author Name</h3>
+                                                    <p class="blog-card__user__designation">Author</p>
                                         </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
+                                            </div>
+                                            <h2 class="blog-card__title"><a href="#" class="blog-title-link">Blog Title</a></h2>
+                                            <p class="blog-card__excerpt" style="margin-top: 15px; font-size: 14px; color: var(--bekenbeysolicitors-text-gray); line-height: 1.6;"></p>
                                     </div><!-- /.blog-card__content -->
                                     <div class="blog-card__image">
                                         <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-1.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-1.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
-                                    </div><!-- /.blog-card__image -->
-                                    <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
-                                    </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                                    <div class="blog-card__content">
-                                        <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
-                                            <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
+                                                <img src="" alt="" class="blog-featured-img-1">
+                                                <img src="" alt="" class="blog-featured-img-2">
+                                                <a href="#" class="blog-card__image__link blog-image-link"><span class="sr-only">Read article</span></a>
                                             </div>
-                                        </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
-                                    </div><!-- /.blog-card__content -->
-                                    <div class="blog-card__image">
-                                        <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-2.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-2.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
+                                            <div class="blog-card__date blog-date-badge"><span class="blog-day">01</span><span class="blog-month">Jan</span></div>
                                     </div><!-- /.blog-card__image -->
                                     <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
+                                            <li><a href="#" class="blog-readmore-link">Read More</a></li>
+                                            <li class="blog-category-badge" style="color: var(--bekenbeysolicitors-base);"><i class="icon-folder"></i> <span class="blog-category-text">Category</span></li>
                                     </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
+                                    </article><!-- /.blog-card -->
                             </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                                    <div class="blog-card__content">
-                                        <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
-                                            <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
-                                    </div><!-- /.blog-card__content -->
-                                    <div class="blog-card__image">
-                                        <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-3.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-3.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
-                                    </div><!-- /.blog-card__image -->
-                                    <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
-                                    </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                                    <div class="blog-card__content">
-                                        <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
-                                            <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
-                                    </div><!-- /.blog-card__content -->
-                                    <div class="blog-card__image">
-                                        <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-4.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-4.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
-                                    </div><!-- /.blog-card__image -->
-                                    <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
-                                    </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                                    <div class="blog-card__content">
-                                        <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
-                                            <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
-                                    </div><!-- /.blog-card__content -->
-                                    <div class="blog-card__image">
-                                        <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-5.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-5.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
-                                    </div><!-- /.blog-card__image -->
-                                    <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
-                                    </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                                    <div class="blog-card__content">
-                                        <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
-                                            <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
-                                    </div><!-- /.blog-card__content -->
-                                    <div class="blog-card__image">
-                                        <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-6.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-6.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
-                                    </div><!-- /.blog-card__image -->
-                                    <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
-                                    </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                                    <div class="blog-card__content">
-                                        <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
-                                            <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
-                                    </div><!-- /.blog-card__content -->
-                                    <div class="blog-card__image">
-                                        <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-1.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-1.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
-                                    </div><!-- /.blog-card__image -->
-                                    <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
-                                    </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                                    <div class="blog-card__content">
-                                        <div class="blog-card__user">
-                                            <img src="assets/images/blog/blog-user-1.jpg" alt="10 Simple Practices that Will Help You Get 1% " class="blog-card__user__img">
-                                            <div class="blog-card__user__info">
-                                                <h3 class="blog-card__user__name">Ronald Richards</h3>
-                                                <p class="blog-card__user__designation">Admin</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="blog-card__title"><a href="blog-details.html">10 Simple Practices that Will Help You Get 1% </a></h3><!-- /.blog-card__title -->
-                                    </div><!-- /.blog-card__content -->
-                                    <div class="blog-card__image">
-                                        <div class="blog-card__image__inner">
-                                            <img src="assets/images/blog/blog-1-2.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <img src="assets/images/blog/blog-1-2.jpg" alt="10 Simple Practices that Will Help You Get 1% ">
-                                            <a href="blog-details.html" class="blog-card__image__link"><span class="sr-only">10 Simple Practices that Will Help You Get 1% </span></a>
-                                        </div>
-                                        <div class="blog-card__date"><span>03</span>Feb</div><!-- /.blog-card__date -->
-                                    </div><!-- /.blog-card__image -->
-                                    <ul class="list-unstyled blog-card__meta">
-                                        <li><a href="blog-details.html">Read More</a></li>
-                                        <li><i class="icon-bubble-chat-1"></i>2 Comments</li>
-                                    </ul><!-- /.list-unstyled blog-card__meta -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-lg-12">
-                                <ul class="post-pagination list-unstyled">
-                                    <li><a href="blog-list.html" class="active">1</a></li>
-                                    <li><a href="blog-list.html">2</a></li>
-                                    <li><a href="blog-list.html"><i class="fas fa-chevron-right"></i></a></li>
-                                </ul>
-                            </div>
+                            </template>
                         </div><!-- /.row -->
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
@@ -801,6 +624,109 @@
     <script src="assets/vendors/gsap/bekenbeysolicitors-split.js"></script>
     <!-- template js -->
     <script src="assets/js/bekenbeysolicitors-min.js"></script>
+
+    <!-- Blog List Dynamic Loading Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadBlogPosts();
+        });
+
+        function loadBlogPosts() {
+            const blogPosts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
+            const publishedPosts = blogPosts.filter(post => post.status === 'published');
+            const container = document.getElementById('blogPostsContainer');
+            const template = document.getElementById('blogCardTemplate');
+            const noBlogsMessage = document.getElementById('noBlogsMessage');
+            
+            if (publishedPosts.length === 0) {
+                noBlogsMessage.style.display = 'block';
+                return;
+            }
+            
+            noBlogsMessage.style.display = 'none';
+            
+            publishedPosts.forEach((post, index) => {
+                const clone = template.content.cloneNode(true);
+                
+                // Set blog title
+                const titleLink = clone.querySelector('.blog-title-link');
+                titleLink.textContent = post.blogTitle || 'Untitled Post';
+                titleLink.href = `blog-details.html?id=${post.id || index}`;
+                
+                // Set author
+                const authorName = clone.querySelector('.blog-author-name');
+                if (authorName) authorName.textContent = post.author || 'Admin';
+                
+                // Set excerpt (from meta description or first 150 chars of content)
+                const excerpt = clone.querySelector('.blog-card__excerpt');
+                if (excerpt) {
+                    const excerptText = post.metaDescription || extractText(post.blogContent).substring(0, 150) + '...';
+                    excerpt.textContent = excerptText;
+                }
+                
+                // Set featured image
+                const featuredImg1 = clone.querySelector('.blog-featured-img-1');
+                const featuredImg2 = clone.querySelector('.blog-featured-img-2');
+                const imageUrl = getImageUrl(post);
+                if (featuredImg1) {
+                    featuredImg1.src = imageUrl;
+                    featuredImg1.alt = post.imageAltText || post.blogTitle;
+                }
+                if (featuredImg2) {
+                    featuredImg2.src = imageUrl;
+                    featuredImg2.alt = post.imageAltText || post.blogTitle;
+                }
+                
+                // Set image link
+                const imageLink = clone.querySelector('.blog-image-link');
+                if (imageLink) imageLink.href = `blog-details.html?id=${post.id || index}`;
+                
+                // Set date
+                const date = new Date(post.publishDate || post.lastUpdated);
+                const day = clone.querySelector('.blog-day');
+                const month = clone.querySelector('.blog-month');
+                if (day && month) {
+                    day.textContent = String(date.getDate()).padStart(2, '0');
+                    month.textContent = date.toLocaleDateString('en-US', { month: 'short' });
+                }
+                
+                // Set category
+                const categoryText = clone.querySelector('.blog-category-text');
+                if (categoryText) {
+                    categoryText.textContent = post.category ? formatCategory(post.category) : 'General';
+                }
+                
+                // Set read more link
+                const readMoreLink = clone.querySelector('.blog-readmore-link');
+                if (readMoreLink) readMoreLink.href = `blog-details.html?id=${post.id || index}`;
+                
+                container.appendChild(clone);
+            });
+        }
+
+        function getImageUrl(post) {
+            if (post.featuredImageUrl && post.featuredImageUrl.trim()) {
+                return post.featuredImageUrl;
+            }
+            if (post.featuredImage && typeof post.featuredImage === 'string') {
+                return post.featuredImage;
+            }
+            // Default fallback image
+            return 'assets/images/blog/blog-1-1.jpg';
+        }
+
+        function extractText(html) {
+            const temp = document.createElement('div');
+            temp.innerHTML = html || '';
+            return temp.textContent || temp.innerText || '';
+        }
+
+        function formatCategory(category) {
+            return category.split('-').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ');
+        }
+    </script>
 </body>
 
 </html>

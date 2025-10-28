@@ -24007,4 +24007,179 @@ body.boxed-wrapper {
     text-transform: capitalize;
     color: var(--bekenbeysolicitors-primary, #19223a);
 }
+
+/*--------------------------------------------------------------
+# Floating Chatbot
+--------------------------------------------------------------*/
+.chatbot-float-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 51px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--bekenbeysolicitors-base, #c7954a);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bekenbeysolicitors-white, #fff);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 500ms ease;
+}
+
+.chatbot-float-btn:hover {
+    background-color: var(--bekenbeysolicitors-primary, #19223a);
+    transform: scale(1.1);
+}
+
+.chatbot-float-btn i {
+    transition: all 300ms ease;
+}
+
+.chatbot-float-btn.active i.icon-chat:before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.chatbot-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--bekenbeysolicitors-white, #fff);
+    z-index: 998;
+    transition: right 500ms ease;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.chatbot-panel.active {
+    right: 0;
+}
+
+.chatbot-panel__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--bekenbeysolicitors-black-rgb, 0, 0, 0), 0.5);
+    z-index: 997;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.chatbot-panel__overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.chatbot-panel__header {
+    padding: 30px 40px;
+    background-color: var(--bekenbeysolicitors-primary, #19223a);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot-panel__header__title {
+    color: var(--bekenbeysolicitors-white, #fff);
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.chatbot-panel__header__tagline {
+    color: var(--bekenbeysolicitors-text-dark, #7782A0);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.chatbot-panel__close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--bekenbeysolicitors-text-dark, #7782A0);
+    color: var(--bekenbeysolicitors-white, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 300ms ease;
+}
+
+.chatbot-panel__close:hover {
+    background-color: var(--bekenbeysolicitors-base, #c7954a);
+    border-color: var(--bekenbeysolicitors-base, #c7954a);
+}
+
+.chatbot-panel__content {
+    padding: 40px;
+}
+
+.chatbot-panel__form .form-one__group {
+    grid-gap: 20px;
+}
+
+.chatbot-panel__form .form-one__control input,
+.chatbot-panel__form .form-one__control textarea {
+    background-color: var(--bekenbeysolicitors-gray2, #ededed);
+    border-bottom: 1px solid var(--bekenbeysolicitors-border-color, #d9d9d9);
+}
+
+.chatbot-panel__form .bekenbeysolicitors-btn {
+    margin-top: 20px;
+    background-color: var(--bekenbeysolicitors-primary, #19223a);
+}
+
+.chatbot-panel__form .bekenbeysolicitors-btn > i {
+    background-color: var(--bekenbeysolicitors-primary, #19223a);
+}
+
+.chatbot-panel__form .bekenbeysolicitors-btn > span {
+    background-color: var(--bekenbeysolicitors-base, #c7954a);
+}
+
+@media (max-width: 991px) {
+    .chatbot-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .chatbot-panel__header {
+        padding: 25px 30px;
+    }
+    
+    .chatbot-panel__content {
+        padding: 30px 20px;
+    }
+    
+    .chatbot-float-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .chatbot-panel__header__title {
+        font-size: 20px;
+    }
+    
+    .chatbot-panel__close {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
 /*# sourceMappingURL=bekenbeysolicitors.css.map */

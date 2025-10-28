@@ -377,15 +377,15 @@
                 $(this)
                     .find(".accrodion-title")
                     .on("click", function () {
-                        var clickedAccrodion = $(this).parent(); // Týklanan accrodion öðesi
+                        var clickedAccrodion = $(this).parent(); // Tï¿½klanan accrodion ï¿½ï¿½esi
 
                         if (clickedAccrodion.hasClass("active")) {
-                            // 1. ZATEN AKTÝFSE: Kapatma iþlemini yap
+                            // 1. ZATEN AKTï¿½FSE: Kapatma iï¿½lemini yap
                             clickedAccrodion.removeClass("active");
                             clickedAccrodion.find(".accrodion-content").slideUp();
 
                         } else {
-                            // 2. AKTÝF DEÐÝLSE: Açma iþlemini yap (Diðerlerini kapatýp kendini aç)
+                            // 2. AKTï¿½F DEï¿½ï¿½LSE: Aï¿½ma iï¿½lemini yap (Diï¿½erlerini kapatï¿½p kendini aï¿½)
                             $(".bekenbeysolicitors-accrodion." + accrodionName)
                                 .find(".accrodion")
                                 .removeClass("active");
@@ -885,4 +885,30 @@
       $(this).addClass("active");
     });
   });
+
+  // Chatbot Functionality
+  if ($(".chatbot-float-btn").length) {
+    $(".chatbot-float-btn").on("click", function () {
+      $(this).toggleClass("active");
+      $(".chatbot-panel").toggleClass("active");
+      $(".chatbot-panel__overlay").toggleClass("active");
+      $("body").toggleClass("chatbot-open");
+    });
+
+    $(".chatbot-panel__close, .chatbot-panel__overlay").on("click", function () {
+      $(".chatbot-float-btn").removeClass("active");
+      $(".chatbot-panel").removeClass("active");
+      $(".chatbot-panel__overlay").removeClass("active");
+      $("body").removeClass("chatbot-open");
+    });
+
+    // Prevent body scroll when chatbot is open
+    $("body").on("DOMSubtreeModified", function () {
+      if ($("body").hasClass("chatbot-open")) {
+        $("body").css("overflow", "hidden");
+      } else {
+        $("body").css("overflow", "");
+      }
+    });
+  }
 })(jQuery);

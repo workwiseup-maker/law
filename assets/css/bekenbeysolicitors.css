@@ -481,7 +481,7 @@ h6 {
 .block-title__decor {
     width: 21px;
     height: 14px;
-    background-image: url(../images/shapes/leaf-1-1.png);
+    background-image: url(../images/shapes/leaf-1-1.webp);
     background-repeat: no-repeat;
     background-position: top center;
     display: inline-block;
@@ -7586,7 +7586,7 @@ body.megamenu-popup-active {
 --------------------------------------------------------------*/
 .funfact-one {
     background-color: var(--bekenbeysolicitors-base, #c7954a);
-    background-image: url(../images/shapes/funfact-bg-1-1.jpg);
+    background-image: url(../images/shapes/funfact-bg-1-1.webp);
     background-size: cover;
     background-position: center center;
     padding-top: 80px;
@@ -15721,7 +15721,7 @@ body.megamenu-popup-active {
     bottom: 0;
     background-color: var(--bekenbeysolicitors-black, #0e0b06);
     opacity: 0.3;
-    cursor: url(../images/close.png), auto;
+    cursor: url(../images/close.webp), auto;
 }
 
 .mobile-nav__content {
@@ -15941,7 +15941,7 @@ body.megamenu-popup-active {
     -webkit-transition-delay: 0.3s;
     background-color: #000;
     opacity: 0.9;
-    cursor: url(../images/close.png), auto;
+    cursor: url(../images/close.webp), auto;
 }
 
 @media (max-width: 767px) {
@@ -16097,7 +16097,7 @@ body.megamenu-popup-active {
     bottom: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/backgrounds/page-header-bg-1-1.jpg);
+    background-image: url(../images/backgrounds/page-header-bg-1-1.webp);
 }
     .page-header__bg::after {
         content: "";
@@ -16116,7 +16116,7 @@ body.megamenu-popup-active {
     bottom: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/backgrounds/page-header-bg-1-1.jpg);
+    background-image: url(../images/backgrounds/page-header-bg-1-1.webp);
 }
 
     .page-header__bg2::after {
@@ -16139,7 +16139,7 @@ body.megamenu-popup-active {
     bottom: 0;
     background-repeat: no-repeat;
     background-size: cover;
-/*    background-image: url(../images/shapes/page-header-shape.png);
+/*    background-image: url(../images/shapes/page-header-shape.webp);
 */}
 
 .page-header .container {

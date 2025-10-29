@@ -82,7 +82,7 @@ All pages have been updated with unique, keyword-optimized titles (50-60 charact
 10. **Mobile Optimization**: Verify responsive design and mobile-friendliness
 
 ### Low Priority:
-11. **Image File Names**: Rename image files to be more descriptive (e.g., "service-d-1.jpg" → "skilled-worker-visa-uk.jpg")
+11. **Image File Names**: Rename image files to be more descriptive (e.g., "service-d-1.webp" → "skilled-worker-visa-uk.webp")
 12. **URL Structure**: Consider cleaner URLs without .html extensions (requires server configuration)
 13. **Page Load Speed**: Optimize images, minify CSS/JS, enable caching
 14. **Internal Links**: Add more contextual internal links in body content

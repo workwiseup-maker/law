@@ -396,21 +396,18 @@
         }
         
         .subheading-item {
+            padding: 20px;
+            background-color: var(--bekenbeysolicitors-gray);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+        }
+        
+        .subheading-header {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 10px;
-            background-color: var(--bekenbeysolicitors-gray);
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        
-        .subheading-item input {
-            flex: 1;
-            border: 1px solid var(--bekenbeysolicitors-border-color);
-            border-radius: 3px;
-            padding: 8px 12px;
-            font-size: 14px;
+            margin-bottom: 15px;
         }
         
         .subheading-item select {
@@ -419,6 +416,38 @@
             border-radius: 3px;
             padding: 8px;
             font-size: 14px;
+            background-color: var(--bekenbeysolicitors-white);
+        }
+        
+        .subheading-item input[type="text"] {
+            flex: 1;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 3px;
+            padding: 8px 12px;
+            font-size: 14px;
+            background-color: var(--bekenbeysolicitors-white);
+        }
+        
+        .subheading-content {
+            width: 100%;
+        }
+        
+        .subheading-content textarea {
+            width: 100%;
+            min-height: 150px;
+            border: 1px solid var(--bekenbeysolicitors-border-color);
+            border-radius: 3px;
+            padding: 12px;
+            font-size: 14px;
+            resize: vertical;
+            font-family: var(--bekenbeysolicitors-font);
+            background-color: var(--bekenbeysolicitors-white);
+        }
+        
+        .subheading-content textarea:focus {
+            outline: none;
+            border-color: var(--bekenbeysolicitors-base);
+            box-shadow: 0 0 0 3px rgba(var(--bekenbeysolicitors-base-rgb), 0.1);
         }
         
         .btn-remove-subheading {
@@ -663,6 +692,19 @@
                             ></textarea>
                             <small class="form-help-text">Tip: Include relevant keywords naturally throughout the content. Add internal links to other pages on your site.</small>
                         </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="subheadings">Subheadings (H2-H3 Outline)</label>
+                            <span class="form-help-text">
+                                Organize your content structure by adding H2 and H3 headings with their content.
+                            </span>
+                            <ul class="subheading-list" id="subheadingsList">
+                                <!-- Subheadings will be added here dynamically -->
+                            </ul>
+                            <button type="button" class="btn-add-subheading" onclick="addSubheading()">
+                                <i class="fas fa-plus"></i> Add Subheading
+                            </button>
+                        </div>
                     </div>
 
                     <!-- SEO FIELDS -->
@@ -699,26 +741,6 @@
                             <input type="hidden" id="keywordsHidden" name="additionalKeywords" />
                         </div>
 
-                        <div class="form-group">
-                            <label class="form-label" for="subheadings">Subheadings (H2-H3 Outline)</label>
-                            <span class="form-help-text">
-                                Organize your content structure. These will be auto-extracted from your content. 
-                                <span class="auto-generated-badge">AUTO-GENERATED</span>
-                            </span>
-                            <ul class="subheading-list" id="subheadingsList">
-                                <li class="subheading-item">
-                                    <select class="subheading-level">
-                                        <option value="H2">H2</option>
-                                        <option value="H3">H3</option>
-                                    </select>
-                                    <input type="text" class="subheading-text" placeholder="Enter subheading text" />
-                                    <button type="button" class="btn-remove-subheading" onclick="removeSubheading(this)">Remove</button>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn-add-subheading" onclick="addSubheading()">
-                                <i class="fas fa-plus"></i> Add Subheading
-                            </button>
-                        </div>
                     </div>
 
                     <!-- MEDIA FIELDS -->
@@ -900,17 +922,7 @@
                             Advanced SEO Settings
                         </h3>
 
-                        <div class="form-group">
-                            <label class="form-label" for="canonicalUrl">Canonical URL</label>
-                            <span class="form-help-text">Specify the original URL if this content exists elsewhere. Leave empty for new content.</span>
-                            <input 
-                                type="url" 
-                                id="canonicalUrl" 
-                                name="canonicalUrl" 
-                                class="form-control" 
-                                placeholder="https://example.com/original-article"
-                            />
-                        </div>
+                       
 
                         <div class="form-group">
                             <label class="form-label">Robots Meta Tag</label>
@@ -937,15 +949,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="form-label" for="schemaType">Schema Markup Type</label>
-                            <span class="form-help-text">Select the appropriate schema type for structured data and rich results.</span>
-                            <select id="schemaType" name="schemaType" class="form-select">
-                                <option value="BlogPosting" selected>BlogPosting</option>
-                                <option value="Article">Article</option>
-                                <option value="NewsArticle">NewsArticle</option>
-                            </select>
-                        </div>
+                       
                     </div>
 
                     <!-- CONTENT MANAGEMENT -->
@@ -1356,18 +1360,23 @@
             const item = document.createElement('li');
             item.className = 'subheading-item';
             item.innerHTML = `
-                <select class="subheading-level">
-                    <option value="H2">H2</option>
-                    <option value="H3">H3</option>
-                </select>
-                <input type="text" class="subheading-text" placeholder="Enter subheading text" />
-                <button type="button" class="btn-remove-subheading" onclick="removeSubheading(this)">Remove</button>
+                <div class="subheading-header">
+                    <select class="subheading-level">
+                        <option value="H2">H2</option>
+                        <option value="H3">H3</option>
+                    </select>
+                    <input type="text" class="subheading-text" placeholder="Enter heading title (e.g., 'What is a UK Visa?')" />
+                    <button type="button" class="btn-remove-subheading" onclick="removeSubheading(this)">Remove</button>
+                </div>
+                <div class="subheading-content">
+                    <textarea class="subheading-textarea" placeholder="Enter the content for this section..."></textarea>
+                </div>
             `;
             list.appendChild(item);
         }
 
         function removeSubheading(button) {
-            button.parentElement.remove();
+            button.closest('.subheading-item').remove();
         }
 
         // File Upload Handler
@@ -1496,8 +1505,9 @@
             document.querySelectorAll('.subheading-item').forEach(item => {
                 const level = item.querySelector('.subheading-level').value;
                 const text = item.querySelector('.subheading-text').value;
+                const content = item.querySelector('.subheading-textarea').value;
                 if (text) {
-                    subheadings.push({ level, text });
+                    subheadings.push({ level, text, content });
                 }
             });
             data.subheadings = subheadings;

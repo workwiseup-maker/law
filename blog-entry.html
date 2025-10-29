@@ -982,15 +982,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Last Updated</label>
-                            <span class="form-help-text">Auto-updates for schema and structured data.</span>
+                            <label class="form-label form-label-required" for="publishedDate">Published Date</label>
+                            <span class="form-help-text">Displays when the blog post was originally published. This field can be manually edited if needed.</span>
                             <input 
-                                type="text" 
-                                id="lastUpdated" 
-                                name="lastUpdated" 
+                                type="datetime-local" 
+                                id="publishedDate" 
+                                name="publishedDate" 
                                 class="form-control" 
-                                readonly
-                                value=""
+                                required
                             />
                         </div>
                     </div>
@@ -1240,7 +1239,7 @@
     <script>
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
-            updateLastUpdated();
+            setInitialPublishedDate();
             initializeCharCounters();
             initializeTagInputs();
             setupPermalinkGeneration();
@@ -1397,11 +1396,28 @@
             }
         }
 
-        // Update Last Updated Timestamp
-        function updateLastUpdated() {
+        // Set Initial Published Date
+        function setInitialPublishedDate() {
             const now = new Date();
-            const formatted = now.toISOString();
-            document.getElementById('lastUpdated').value = formatted;
+            // Format for datetime-local input: YYYY-MM-DDTHH:MM
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const formatted = `${year}-${month}-${day}T${hours}:${minutes}`;
+            document.getElementById('publishedDate').value = formatted;
+        }
+        
+        // Get current datetime for published date
+        function getCurrentDateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            return `${year}-${month}-${day}T${hours}:${minutes}`;
         }
 
         // Form Validation
@@ -1434,7 +1450,6 @@
 
         // Save as Draft
         function saveDraft() {
-            updateLastUpdated();
             showConfirmationModal(
                 'Save as Draft',
                 'Are you sure you want to save this blog post as a draft? You can publish it later.',
@@ -1442,7 +1457,6 @@
                     const formData = getFormData();
                     formData.status = 'draft';
                     formData.id = Date.now().toString();
-                    formData.publishDate = new Date().toISOString();
                     saveBlogPost(formData);
                     console.log('Saving draft:', formData);
                     showNotification('Draft saved successfully!', 'success');
@@ -1458,7 +1472,6 @@
                 return;
             }
             
-            updateLastUpdated();
             showConfirmationModal(
                 'Publish Blog Post',
                 'Are you sure you want to publish this blog post? It will be visible to the public.',
@@ -1466,7 +1479,6 @@
                     const formData = getFormData();
                     formData.status = 'published';
                     formData.id = Date.now().toString();
-                    formData.publishDate = new Date().toISOString();
                     saveBlogPost(formData);
                     console.log('Publishing blog:', formData);
                     showNotification('Blog post published successfully!', 'success');

@@ -15,16 +15,16 @@ All pages have been updated with unique, keyword-optimized titles (50-60 charact
 - **faq.html**: "FAQs | UK Immigration Questions | Bekenbey Solicitors"
 
 #### Visa Service Pages (12 pages):
-- **Global Talent Visa**: "Global Talent Visa UK | Expert Endorsement Support"
+- **Global Talent Visa**: "Global Talent Visa UK | Endorsement Support"
 - **Innovator Founder Visa**: "Innovator Founder Visa UK | Start-Up Business Visa"
 - **High Potential Individual**: "High Potential Individual Visa | Top Graduate Route"
 - **Graduate Visa**: "Graduate Visa UK | Post-Study Work Visa Guidance"
 - **Student Visa**: "Student Visa UK | University Application Support"
 - **Family Visa**: "Family Visa UK | Spouse & Partner Visa Advice"
 - **Health & Care Worker**: "Health & Care Worker Visa UK | NHS Visa Advice"
-- **Skilled Worker**: "Skilled Worker Visa UK | Expert Application Support"
+- **Skilled Worker**: "Skilled Worker Visa UK | Application Support"
 - **Self-Sponsorship**: "Self-Sponsorship Visa UK | Own Company Visa Route"
-- **Sponsor Licence**: "UK Sponsor Licence | Expert Application Support"
+- **Sponsor Licence**: "UK Sponsor Licence | Application Support"
 - **Scale-Up Visa**: "Scale-Up Visa UK | Fast-Growing Company Route"
 - **Global Business Mobility**: "Global Business Mobility Visa UK | GBM Route"
 

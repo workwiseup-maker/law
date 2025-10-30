@@ -10096,6 +10096,31 @@ body.megamenu-popup-active {
                 transform-origin: left center;
             }
 
+    .service-sidebar__nav__submenu {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+        display: none;
+    }
+
+        .service-sidebar__nav li.dropdown:hover .service-sidebar__nav__submenu {
+            display: block;
+        }
+
+        .service-sidebar__nav__submenu li {
+            margin-top: 5px;
+        }
+
+            .service-sidebar__nav__submenu li a {
+                padding: 8px 20px 8px 45px;
+                font-size: 14px;
+                background-color: rgba(199, 149, 74, 0.05);
+            }
+
+                .service-sidebar__nav__submenu li a:hover {
+                    background-color: rgba(199, 149, 74, 0.1);
+                }
+
 .service-sidebar__contact {
     background-color: var(--bekenbeysolicitors-primary, #19223a);
     padding: 21px 30px;

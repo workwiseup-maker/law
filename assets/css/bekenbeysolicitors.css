@@ -19586,6 +19586,24 @@ body.page-index .page-header .icon-success-1 {
     display: block;
     margin-top: 2px;
 }
+.about-one__image__title-simple {
+    /* 1. Konumlandırma sorununu çözmek için */
+    position: relative; /* Normal akışta kalmasını sağlar */
+    margin-top: 15px; /* Görsel ile arasında az miktarda boşluk bırakır */
+    padding: 0; /* Varsayılan boşlukları sıfırlar */
+    width: 100%; /* Konteynerin tam genişliğini kullanır */
+    box-sizing: border-box;
+}
+
+    .about-one__image__title-simple p {
+        /* 2. Yazı stilini düzenlemek için */
+        font-size: clamp(16px, 3vw, 18px); /* Responsive boyutlandırma korunur */
+        font-weight: 600;
+        color: #1a1a1a;
+        margin: 0; /* Boşluk oluşturan varsayılan p marjinlerini kaldırır */
+        text-align: center;
+        line-height: 1.4;
+    }
 
 .about-one__inner {
     box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.1019607843);

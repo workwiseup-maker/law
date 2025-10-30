@@ -24446,6 +24446,7 @@ body.boxed-wrapper {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+
 @media (max-width: 991px) {
     .page-header .about-hero-card {
         margin-top: 30px;

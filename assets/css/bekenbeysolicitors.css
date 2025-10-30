@@ -24383,6 +24383,13 @@ body.boxed-wrapper {
         font-size: 13px;
     }
 }
+@media (max-width: 768px) {
+    .bio-container {
+        float: none !important;
+        max-width: 100% !important;
+        margin: 0 0 20px 0 !important;
+    }
+}
 
 /* Mobile - single column stacked */
 @media (max-width: 575px) {

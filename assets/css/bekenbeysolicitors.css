@@ -24210,7 +24210,7 @@ body.boxed-wrapper {
 }
 
 .work-process-table__item {
-    background-color: #f8f9fa;
+    background-color: #f1f3f4;
     padding: 28px 20px;
     border-radius: 8px;
     border: 1px solid #e5e7eb;
@@ -24281,6 +24281,12 @@ body.boxed-wrapper {
         font-size: 17px;
         min-height: 44px;
     }
+        .work-process-table__item__title .consultation-note {
+            font-style: italic; /* italik yapar */
+            display: block; /* alt satıra alır */
+            margin-top: 4px; /* üstten biraz boşluk ekler (isteğe bağlı) */
+            color: #666; /* istersen biraz daha soluk renk verebilirsin */
+        }
     
     .work-process-table__item__text {
         font-size: 13px;

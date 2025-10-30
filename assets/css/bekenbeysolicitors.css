@@ -16129,6 +16129,71 @@ body.megamenu-popup-active {
         background: rgba(0, 0, 0, 0.7); /* Daha koyu siyah */
         z-index: 1;
     }
+
+/* Index page specific styles - white background with dark text for contrast */
+body.page-index .page-header__bg2 {
+    background-image: none;
+    background-color: #F2F6FA;
+}
+
+body.page-index .page-header__bg2::after {
+    display: none;
+}
+
+/* Dark text colors for readability on white background */
+body.page-index .page-header .sec-title__tagline div[style*="color: #fff"] {
+    color: #1a2332 !important;
+}
+
+body.page-index .page-header h1[style*="color: #fff"] {
+    color: #1a2332 !important;
+}
+
+body.page-index .page-header p[style*="color: #ededed"] {
+    color: #5a6c7d !important;
+}
+
+/* SVG icon color for index page */
+body.page-index .page-header .hammer path {
+    fill: #2563eb;
+}
+
+/* Button styles for white background */
+body.page-index .page-header .bekenbeysolicitors-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 2px solid #2563eb;
+}
+
+body.page-index .page-header .bekenbeysolicitors-btn[style*="background-color: transparent"] {
+    background-color: transparent !important;
+    color: #2563eb !important;
+    border: 2px solid #2563eb !important;
+}
+
+/* Info card styling for white background */
+body.page-index .page-header div[style*="background-color: rgba(255, 255, 255, 0.1)"] {
+    background-color: rgba(37, 99, 235, 0.05) !important;
+    border: 1px solid rgba(37, 99, 235, 0.2) !important;
+}
+
+body.page-index .page-header h4[style*="color: #fff"] {
+    color: #1a2332 !important;
+}
+
+body.page-index .page-header p[style*="color: #ededed"] {
+    color: #5a6c7d !important;
+}
+
+body.page-index .page-header div[style*="border-top: 1px solid rgba(255, 255, 255, 0.2)"] {
+    border-top-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Icon color inside info card circles */
+body.page-index .page-header .icon-calendar,
+body.page-index .page-header .icon-success-1 {
+    color: #ffffff !important;
+}
    
 
 .page-header__shape {

@@ -10096,6 +10096,35 @@ body.megamenu-popup-active {
                 transform-origin: left center;
             }
 
+        /* Prevent dropdown parent from getting hover styles unless subitem is being interacted with */
+        .service-sidebar__nav li.dropdown::before,
+        .service-sidebar__nav li.dropdown::after {
+            width: 0 !important;
+            background-color: transparent !important;
+        }
+
+        .service-sidebar__nav li.dropdown > a {
+            border-color: var(--bekenbeysolicitors-border-color, #d9d9d9) !important;
+            color: var(--bekenbeysolicitors-primary, #19223a) !important;
+        }
+
+            .service-sidebar__nav li.dropdown > a::after {
+                transform: scalex(0) !important;
+            }
+
+        /* Only apply hover effect when actually hovering the dropdown itself or when a subitem is active */
+        .service-sidebar__nav li.dropdown:hover > a,
+        .service-sidebar__nav li.dropdown.current > a {
+            border-color: var(--bekenbeysolicitors-base, #c7954a);
+            color: var(--bekenbeysolicitors-white, #fff);
+        }
+
+            .service-sidebar__nav li.dropdown:hover > a::after,
+            .service-sidebar__nav li.dropdown.current > a::after {
+                transform: scalex(1);
+                transform-origin: left center;
+            }
+
     .service-sidebar__nav__submenu {
         list-style: none;
         padding: 0;
@@ -10103,8 +10132,11 @@ body.megamenu-popup-active {
         display: none;
     }
 
-        .service-sidebar__nav li.dropdown:hover .service-sidebar__nav__submenu {
-            display: block;
+        /* Desktop: Show submenu on hover */
+        @media (min-width: 1200px) {
+            .service-sidebar__nav li.dropdown:hover .service-sidebar__nav__submenu {
+                display: block;
+            }
         }
 
         .service-sidebar__nav__submenu li {
@@ -10117,35 +10149,66 @@ body.megamenu-popup-active {
                 background-color: rgba(199, 149, 74, 0.05);
             }
 
-                .service-sidebar__nav__submenu li a:hover {
-                    background-color: rgba(199, 149, 74, 0.1);
+            /* Submenu items should get blue hover effect */
+            .service-sidebar__nav__submenu li:hover a {
+                background-color: rgba(199, 149, 74, 0.1);
+                border-color: var(--bekenbeysolicitors-base, #c7954a);
+                color: var(--bekenbeysolicitors-white, #fff);
+            }
+
+                .service-sidebar__nav__submenu li:hover a::after {
+                    transform: scalex(1);
+                    transform-origin: left center;
                 }
 
         .service-sidebar__toggle {
-            width: 24px;
-            height: 24px;
-            background-color: var(--bekenbeysolicitors-base, #c7954a);
-            border: none;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: 1px solid var(--bekenbeysolicitors-base, #c7954a);
             outline: none;
             cursor: pointer;
             display: none;
             align-items: center;
             justify-content: center;
             font-size: 10px;
-            color: var(--bekenbeysolicitors-white, #fff);
+            color: var(--bekenbeysolicitors-base, #c7954a);
             border-radius: 3px;
             transition: all 0.3s ease;
-            position: relative;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
             z-index: 2;
+            margin-left: auto;
         }
 
             .service-sidebar__toggle:hover {
-                background-color: var(--bekenbeysolicitors-primary, #19223a);
+                background-color: var(--bekenbeysolicitors-base, #c7954a);
+                color: var(--bekenbeysolicitors-white, #fff);
             }
 
             .service-sidebar__toggle.expanded {
-                background-color: var(--bekenbeysolicitors-primary, #19223a);
+                background-color: var(--bekenbeysolicitors-base, #c7954a);
+                color: var(--bekenbeysolicitors-white, #fff);
             }
+
+            .service-sidebar__toggle i {
+                transition: transform 0.3s ease;
+            }
+
+        /* Adjust dropdown link to make room for toggle button on mobile */
+        @media (max-width: 1199px) {
+            .service-sidebar__nav li.dropdown > a {
+                padding-right: 45px;
+                position: relative;
+            }
+
+            /* Hide the arrow icon on mobile for dropdown items as toggle button replaces it */
+            .service-sidebar__nav li.dropdown > a > .icon-arrow-right {
+                display: none;
+            }
+        }
 
         /* Show toggle button on mobile and tablets */
         @media (max-width: 1199px) {

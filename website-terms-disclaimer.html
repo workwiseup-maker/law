@@ -51,30 +51,7 @@
     <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/bekenbeysolicitors.css" />    
-    <!-- Custom styles for dropdown arrows -->
-    <style>
-        .dropdown-arrow {
-            display: inline-block;
-            margin-left: 5px;
-            font-size: 0.7em;
-            transition: transform 0.3s ease;
-        }
-        
-        .dropdown.active .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-        
-        /* Mobile navigation dropdown arrows */
-        .mobile-nav__container .dropdown > a .dropdown-arrow {
-            float: right;
-            margin-top: 3px;
-        }
-        
-        .mobile-nav__container .dropdown.active > a .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/bekenbeysolicitors.css" />
 </head>
 
 <body class="custom-cursor">
@@ -783,32 +760,7 @@
     <script src="assets/vendors/gsap/scrolltrigger.min.js"></script>
     <script src="assets/vendors/gsap/splittext.min.js"></script>
     <script src="assets/vendors/gsap/bekenbeysolicitors-split.js"></script>
-    <!-- template js -->    <script src="assets/js/bekenbeysolicitors.js"></script>    
-    <!-- Dropdown Arrow Rotation Script -->
-    <script>
-    jQuery(document).ready(function($) {
-        // Desktop dropdown arrow rotation
-        $('.main-menu .dropdown').on('mouseenter', function() {
-            $(this).addClass('active');
-        }).on('mouseleave', function() {
-            $(this).removeClass('active');
-        });
-        
-        // Mobile dropdown arrow rotation
-        // Wait for mobile nav to be populated by the template
-        setTimeout(function() {
-            $('.mobile-nav__container .dropdown > a').on('click', function(e) {
-                var $parent = $(this).parent('.dropdown');
-                
-                // Toggle active class
-                $parent.toggleClass('active');
-                
-                // Remove active from siblings
-                $parent.siblings('.dropdown').removeClass('active');
-            });
-        }, 500);
-    });
-    </script>
+    <!-- template js -->    <script src="assets/js/bekenbeysolicitors.js"></script>
 </body>
 
 </html>

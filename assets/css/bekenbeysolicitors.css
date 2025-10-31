@@ -24640,3 +24640,28 @@ body.boxed-wrapper {
 }
 
 /*# sourceMappingURL=bekenbeysolicitors.css.map */
+
+
+/* ==================================== */
+/* Dropdown Arrow Indicators */
+/* ==================================== */
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.7em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Mobile navigation dropdown arrows */
+.mobile-nav__container .dropdown > a .dropdown-arrow {
+    float: right;
+    margin-top: 3px;
+}
+
+.mobile-nav__container .dropdown.active > a .dropdown-arrow {
+    transform: rotate(180deg);
+}

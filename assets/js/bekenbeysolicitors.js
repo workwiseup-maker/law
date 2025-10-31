@@ -951,3 +951,27 @@
     });
   }
 })(jQuery);
+
+  // ==================================== 
+  // Dropdown Arrow Rotation
+  // ==================================== 
+  // Desktop dropdown arrow rotation
+  jQuery('.main-menu .dropdown').on('mouseenter', function() {
+    jQuery(this).addClass('active');
+  }).on('mouseleave', function() {
+    jQuery(this).removeClass('active');
+  });
+  
+  // Mobile dropdown arrow rotation
+  // Wait for mobile nav to be populated by the template
+  setTimeout(function() {
+    jQuery('.mobile-nav__container .dropdown > a').on('click', function(e) {
+      var $parent = jQuery(this).parent('.dropdown');
+      
+      // Toggle active class
+      $parent.toggleClass('active');
+      
+      // Remove active from siblings
+      $parent.siblings('.dropdown').removeClass('active');
+    });
+  }, 500);

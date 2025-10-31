@@ -20925,6 +20925,7 @@ body.megamenu-popup-active {
         content: counters(count, ".", decimal-leading-zero);
         position: relative;
         display: inline-block;
+        color: #e60023 !important; 
     }
 
 .service-one__item__title {

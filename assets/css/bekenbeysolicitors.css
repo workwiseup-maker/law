@@ -21188,6 +21188,12 @@ body.page-index .page-header .icon-success-1 {
         display: inline-block;
     }
 
+/* 🔥 Hover durumunda sayı kırmızı olsun */
+.service-one__item:hover .service-one__item__count::before {
+    color: #e60023 !important;
+}
+
+
 .service-one__item__title {
     font-size: 24px;
     font-weight: 400;

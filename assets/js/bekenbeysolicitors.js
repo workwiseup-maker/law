@@ -258,6 +258,38 @@
     dynamicCurrentMenuClass(mainNavUL);
   }
 
+  // Service sidebar dropdown toggle for mobile
+  if ($(".service-sidebar__nav").length) {
+    let dropdownItems = $(".service-sidebar__nav li.dropdown > a");
+    dropdownItems.each(function () {
+      let self = $(this);
+      // Add toggle button for mobile
+      if (!self.find("button").length) {
+        let toggleBtn = document.createElement("BUTTON");
+        toggleBtn.setAttribute("aria-label", "submenu toggler");
+        toggleBtn.setAttribute("class", "service-sidebar__toggle");
+        toggleBtn.innerHTML = "<i class='fa fa-plus'></i>";
+        self.append(function () {
+          return toggleBtn;
+        });
+        self.find("button").on("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          let btn = $(this);
+          let icon = btn.find("i");
+          btn.toggleClass("expanded");
+          btn.parent().parent().children(".service-sidebar__nav__submenu").slideToggle();
+          // Toggle icon between plus and minus
+          if (icon.hasClass("fa-plus")) {
+            icon.removeClass("fa-plus").addClass("fa-minus");
+          } else {
+            icon.removeClass("fa-minus").addClass("fa-plus");
+          }
+        });
+      }
+    });
+  }
+
   if ($(".main-menu").length && $(".mobile-nav__container").length) {
     let navContent = document.querySelector(".main-menu").innerHTML;
     let mobileNavContainer = document.querySelector(".mobile-nav__container");
@@ -279,16 +311,23 @@
       let self = $(this);
       let toggleBtn = document.createElement("BUTTON");
       toggleBtn.setAttribute("aria-label", "dropdown toggler");
-      toggleBtn.innerHTML = "<i class='fa fa-angle-down'></i>";
+      toggleBtn.innerHTML = "<i class='fa fa-plus'></i>";
       self.append(function () {
         return toggleBtn;
       });
       self.find("button").on("click", function (e) {
         e.preventDefault();
         let self = $(this);
+        let icon = self.find("i");
         self.toggleClass("expanded");
         self.parent().toggleClass("expanded");
         self.parent().parent().children("ul").slideToggle();
+        // Toggle icon between plus and minus
+        if (icon.hasClass("fa-plus")) {
+          icon.removeClass("fa-plus").addClass("fa-minus");
+        } else {
+          icon.removeClass("fa-minus").addClass("fa-plus");
+        }
       });
     });
   }

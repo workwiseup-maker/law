@@ -10121,6 +10121,51 @@ body.megamenu-popup-active {
                     background-color: rgba(199, 149, 74, 0.1);
                 }
 
+        .service-sidebar__toggle {
+            width: 24px;
+            height: 24px;
+            background-color: var(--bekenbeysolicitors-base, #c7954a);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: var(--bekenbeysolicitors-white, #fff);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+            .service-sidebar__toggle:hover {
+                background-color: var(--bekenbeysolicitors-primary, #19223a);
+            }
+
+            .service-sidebar__toggle.expanded {
+                background-color: var(--bekenbeysolicitors-primary, #19223a);
+            }
+
+        /* Show toggle button on mobile and tablets */
+        @media (max-width: 1199px) {
+            .service-sidebar__toggle {
+                display: flex;
+            }
+
+            /* Disable hover behavior on mobile */
+            .service-sidebar__nav li.dropdown:hover .service-sidebar__nav__submenu {
+                display: none;
+            }
+        }
+
+        /* On desktop, hide the toggle button and use hover */
+        @media (min-width: 1200px) {
+            .service-sidebar__toggle {
+                display: none;
+            }
+        }
+
 .service-sidebar__contact {
     background-color: var(--bekenbeysolicitors-primary, #19223a);
     padding: 21px 30px;

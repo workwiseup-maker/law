@@ -23767,6 +23767,28 @@ body.boxed-wrapper {
         padding: 31px 27px;
         border: none;
     }
+.bio-info {
+    border: 1px solid #2563eb; /* Mavi ince çerçeve */
+    border-radius: 8px; /* Köşeleri yuvarlatmak için */
+    padding: 15px 20px; /* İç boşluk */
+    text-align: center; /* Ortala */
+    display: block; /* Çerçevenin boyutunu içeriğe göre ayarla */
+    margin-top: 0px; /* Üstten boşluk */
+}
+
+    .bio-info h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 5px;
+    }
+
+    .bio-info p {
+        font-size: 15px;
+        font-weight: 500;
+        color: #2563eb;
+        margin-bottom: 0;
+    }
 
 /*--------------------------------------------------------------
 # Portfolio Details

@@ -57,7 +57,30 @@
     <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/bekenbeysolicitors.css" />
+    <link rel="stylesheet" href="assets/css/bekenbeysolicitors.css" />    
+    <!-- Custom styles for dropdown arrows -->
+    <style>
+        .dropdown-arrow {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 0.7em;
+            transition: transform 0.3s ease;
+        }
+        
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        /* Mobile navigation dropdown arrows */
+        .mobile-nav__container .dropdown > a .dropdown-arrow {
+            float: right;
+            margin-top: 3px;
+        }
+        
+        .mobile-nav__container .dropdown.active > a .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -101,17 +124,21 @@
                             <ul class="main-menu__list">
 
 
-                                <li class="dropdown megamenu">
+                                <li>
                                     <a href="index.html">Home</a>
-                                
+
                                 </li>
 
-                                <li>
-                                    <a href="about.html">About</a>
+                                <li class="dropdown">
+                                    <a href="#">Our Firm <span class="dropdown-arrow">▼</span></a>
+                                    <ul>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="team.html">Our Team</a></li>
+                                    </ul>
                                 </li>
                                 <li class="dropdown">
-                                <a href="#">Immigration</a>
-                                <ul>
+                                    <a href="#">Immigration <span class="dropdown-arrow">▼</span></a>
+                                    <ul>
                                     <li class="dropdown">
                                         <a href="global-talent-visa.html">Global Talent Visa</a>
                                         <ul>
@@ -396,9 +423,8 @@
                                 <h2 class="footer-widget__title">Links</h2><!-- /.footer-widget__title -->
                                 <ul class="list-unstyled footer-widget__links">
                                     <li><a href="about.html">About Us</a></li>
-                                    
+                                    <li><a href="team.html">Our Team</a></li>
                                     <li><a href="faq.html">FAQ</a></li>
-
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul><!-- /.list-unstyled footer-widget__links -->
                             </div><!-- /.footer-widget -->

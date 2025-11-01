@@ -10303,6 +10303,107 @@ body.megamenu-popup-active {
     margin: 0 0 20px;
 }
 
+/* Mobile toggle button for sidebar */
+.service-sidebar__mobile-toggle {
+    display: none;
+    width: 100%;
+    padding: 20px 25px;
+    background-color: var(--bekenbeysolicitors-primary, #19223a);
+    color: var(--bekenbeysolicitors-white, #fff);
+    border: none;
+    text-align: left;
+    font-family: var(--bekenbeysolicitors-heading-font, "Marcellus", serif);
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+    .service-sidebar__mobile-toggle:hover {
+        background-color: var(--bekenbeysolicitors-base, #c7954a);
+    }
+
+    .service-sidebar__mobile-toggle span {
+        display: inline-block;
+        padding-right: 15px;
+    }
+
+    .service-sidebar__mobile-toggle i {
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+        font-size: 14px;
+    }
+
+    .service-sidebar__mobile-toggle.active i {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+/* Content wrapper for collapsible sidebar */
+.service-sidebar__content {
+    display: block;
+}
+
+/* Mobile styles */
+@media (max-width: 1199px) {
+    /* Show toggle button on mobile */
+    .service-sidebar__mobile-toggle {
+        display: block;
+    }
+
+    /* Hide content by default on mobile */
+    .service-sidebar__content {
+        display: none;
+        animation: slideDown 0.3s ease;
+    }
+
+    /* Show content when active */
+    .service-sidebar__content.active {
+        display: block;
+    }
+
+    /* Adjust order so main content appears first */
+    .service-details .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-details .col-md-12.col-lg-4 {
+        order: 2;
+    }
+
+    .service-details .col-md-12.col-lg-8 {
+        order: 1;
+    }
+}
+
+/* Desktop styles - hide toggle button */
+@media (min-width: 1200px) {
+    .service-sidebar__mobile-toggle {
+        display: none;
+    }
+
+    .service-sidebar__content {
+        display: block;
+    }
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 2000px;
+    }
+}
+
 /*--------------------------------------------------------------
 # Blog details
 --------------------------------------------------------------*/

@@ -975,3 +975,27 @@
       $parent.siblings('.dropdown').removeClass('active');
     });
   }, 500);
+
+  // ==================================== 
+  // Service Sidebar Mobile Toggle
+  // ==================================== 
+  jQuery(document).ready(function($) {
+    // Handle service sidebar mobile toggle
+    $('.service-sidebar__mobile-toggle').on('click', function() {
+      var $toggle = $(this);
+      var $content = $toggle.siblings('.service-sidebar__content');
+      
+      // Toggle active class on button
+      $toggle.toggleClass('active');
+      
+      // Toggle active class on content to show/hide
+      $content.toggleClass('active');
+      
+      // Smooth scroll animation
+      if ($content.hasClass('active')) {
+        $content.slideDown(300);
+      } else {
+        $content.slideUp(300);
+      }
+    });
+  });
